@@ -1,0 +1,119 @@
+{% extends "pageprog.html" %}
+
+
+        {% block listing %}
+
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Modifier un programme</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+                        <form method="GET" action="../sauvegarder/{{etab.id}}/" id="bind">
+                            <table>
+                                <tr>
+                                    <td>
+                           <label>Domaine :</label>
+                                    </td>
+                                    <td>
+                                        {% if etab.domaine == 'ST' %}
+                                        <input name="domaine" type="text" value="{{etab.domaine}} - Sciences et Technologies" readonly>
+                                        {% elif etab.domaine == 'E&G' %}
+                                        <input name="domaine" type="text" value="{{etab.domaine}} - Economies et Gestions" readonly>
+                                        {% endif %}
+                                        </td>
+                                    </tr>
+                                <tr>
+                                    <td>
+                                <label>Mention :</label>
+                                    </td>
+                                    <td>
+                                        {% if etab.mention == 'SI' %}
+                                        <input name="mention" type="text" value="{{etab.mention}} - Sciences Informatiques" readonly>
+                                        {% elif etab.mention == 'E&G' %}
+                                        <input name="mention" type="text" value="{{etab.mention}} - Economies et Gestions" readonly>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                <tr>
+                                <td>
+                                <label>Specialite :</label>
+                                </td>
+                                    <td>
+                                        {% if etab.specialite == 'TEL' %}
+                                        <input name="specialite" type="text" value="{{etab.specialite}} - Telecommunication" readonly>
+                                        {% elif etab.specialite == 'BDD' %}
+                                        <input name="specialite" type="text" value="{{etab.specialite}} - Bases de donnees" readonly>
+                                        {% elif etab.specialite == 'ONE' %}
+                                        <input name="specialite" type="text" value="{{etab.specialite}} - Organisations de Net Economie" readonly>
+                                        {% elif etab.specialite == 'SDE' %}
+                                        <input name="specialite" type="text" value="{{etab.specialite}} - Sciences de l'Entreprise" readonly>
+                                         {% elif etab.specialite == 'SC' %}
+                                        <input name="specialite" type="text" value="{{etab.specialite}} - Sciences comptables" readonly>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                     <tr>
+
+                                <td>
+                                    <label>Type cours :</label>
+                                    </td>
+                                         <td>
+                                             {% if etab.typecours == 'O' %}
+                                            <input name="typecours" type="text" value="{{etab.typecours}} - Obligatoire" readonly>
+                                             {% elif etab.typecours == 'OP' %}
+                                             <input name="typecours" type="text" value="{{etab.typecours}} - Optionnel" readonly>
+                                             {% endif %}
+                                         </td>
+                                      </tr>
+                                <tr>
+                                    <td>
+                                        <label>Langue :</label>
+                                    </td>
+
+                                    <td>
+                                        {% if etab.langue == 'AN' %}
+                                        <input name="langue" type="text" value="{{etab.langue}} - Anglais" readonly>
+                                        {% elif etab.langue == 'FR' %}
+                                        <input name="langue" type="text" value="{{etab.langue}} - Francais" readonly>
+                                        {% endif %}
+                                    </td>
+                                    </tr>
+                                <tr>
+
+                                <td >
+
+                                </td>
+                                    <td style="padding-left:135px">
+                                        <input type="submit" value="Supprimer">
+                                        <a class="submit" href="{% url 'gestionProgramme.views.index' %}" >Annuler</a>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        {{message}}
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                     </table>
+                        </form>
+
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+            </div>
+{% endblock %}

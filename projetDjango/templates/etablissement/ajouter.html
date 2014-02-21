@@ -1,0 +1,72 @@
+{% extends "etabpage.html" %}
+
+
+
+{% block listing %}
+
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Ajouter un etablissement</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+						<form method="GET" action="../sauvegarder/" id="bind">
+                            <table>
+                                <tr>
+                                    <td>
+                           <label>Nom :</label>
+                                    </td>
+                                    <td>
+                           <input name="nom" type="text" required="Champ vide">
+                                        </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Adresse :</label>
+                                        </td>
+                                     <td>
+                           <input name="lieu" type="text" required="Champ vide">
+                                         </td>
+                                <td>
+
+                                </td>
+                                     <tr>
+
+                                <td>
+
+                                    </td>
+                                <td style="padding-left:245px">
+                                    <input type="submit" value="Ajouter">
+                                </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        {{message}}
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                     </table>
+                        </form>
+
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+            </div>
+{% endblock %}

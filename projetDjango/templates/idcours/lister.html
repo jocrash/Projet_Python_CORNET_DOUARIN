@@ -1,0 +1,104 @@
+{% extends "idcourspage.html" %}
+
+
+
+{% block listing %}
+
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Liste des code cours</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+						<table>
+
+							<thead>
+
+								<tr>
+									<th>Id</th>
+									<th>Etablissement</th>
+									<th>Annee</th>
+                                    <th>Semestre</th>
+                                    <th>Nom du cours</th>
+                                    <th>Code du cours</th>
+									<th>Date d'ajout</th>
+									<th>Actions</th>
+								</tr>
+
+							</thead>
+
+							<tfoot>
+
+								<tr>
+
+									<td colspan="5" class="table-footer">
+
+										<label for="table-select-actions">With selected:</label>
+
+										<select id="table-select-actions">
+											<option value="option1">Delete</option>
+											<option value="option2">Export</option>
+											<option value="option3">Archive</option>
+										</select>
+
+										<a href="#" class="round button blue text-upper small-button">Apply to selected</a>
+
+									</td>
+
+								</tr>
+
+							</tfoot>
+
+							<tbody>
+                                {% for ecole in school %}
+								<tr>
+									<td>{{ecole.id}}</td>
+                                    <td>{{ecole.etablissement.nom}}</td>
+                                    {% if ecole.annee == "PROP"%}
+                                    <td>{{ecole.annee}} - Propeudeutique</td>
+                                    {% elif ecole.annee == "L1"%}
+                                    <td>{{ecole.annee}} - Licence 1</td>
+                                    {% elif ecole.annee == "L2"%}
+                                     <td>{{ecole.annee}} - Licence 2</td>
+                                    {% elif ecole.annee == "L3"%}
+                                    <td>{{ecole.annee}} - Licence 3</td>
+                                    {% elif ecole.annee == "M1"%}
+                                    <td>{{ecole.annee}} - Master 1</td>
+                                    {%else%}
+                                    <td>{{ecole.annee}} - Master 2</td>
+                                    {%endif%}
+
+                                    {% if ecole.semestre == "S1"%}
+                                    <td>{{ecole.semestre}} - Semestre 1</td>
+                                    {%else%}
+                                    <td>{{ecole.semestre}} - Semestre 2</td>
+                                    {%endif%}
+                                    <td>{{ecole.nomcours}}</td>
+                                    <td>{{ecole.codecours}}</td>
+                                    <td>{{ecole.date}}</td>
+                                    <!--<td><a href="../gestion_etablissement/modifier/{{ecole.id}}"> Modifier</a></td>-->
+                                    <!--<td> <a href="../gestion_etablissement/suppression/{{ecole.id}}"> Supprimer </a></td>-->
+									<td>
+										<a href="../gestion_Idcours/modifier/{{ecole.id}}" class="table-actions-button ic-table-edit" title="Editer"></a>
+										<a href="../gestion_Idcours/suppression/{{ecole.id}}" class="table-actions-button ic-table-delete" title="Effacer"></a>
+									</td>
+								</tr>
+                                {% endfor %}
+
+							</tbody>
+
+						</table>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+            </div>
+
+    {% endblock %}

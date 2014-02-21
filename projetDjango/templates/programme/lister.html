@@ -1,0 +1,117 @@
+{% extends "pageprog.html" %}
+
+        {% block listing %}
+
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Liste des programmes</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+						<table>
+
+							<thead>
+
+								<tr>
+									<th>Id</th>
+									<th>Domaine</th>
+									<th>Mention</th>
+									<th>Specialite</th>
+									<th>Type cours</th>
+                                    <th>Langue</th>
+                                    <th>Date d'ajout</th>
+                                    <th>Actions</th>
+								</tr>
+
+							</thead>
+
+							<tfoot>
+
+								<tr>
+
+									<td colspan="5" class="table-footer">
+
+										<label for="table-select-actions">With selected:</label>
+
+										<select id="table-select-actions">
+											<option value="option1">Delete</option>
+											<option value="option2">Export</option>
+											<option value="option3">Archive</option>
+										</select>
+
+										<a href="#" class="round button blue text-upper small-button">Apply to selected</a>
+
+									</td>
+
+								</tr>
+
+							</tfoot>
+
+							<tbody>
+                                {% for ecole in school %}
+								<tr>
+									<td>{{ecole.id}}</td>
+
+                                    {% if ecole.domaine == 'ST' %}
+                                    <td>{{ecole.domaine}} - Sciences et Technologies</td>
+                                    {% else %}
+                                    <td>{{ecole.domaine}} - Economie et Gestion</td>
+                                    {% endif %}
+
+                                    {% if ecole.mention == 'SI' %}
+                                    <td>{{ecole.mention}} - Sciences Informatiques</td>
+                                    {% else %}
+                                    <td>{{ecole.mention}} - Economie et Gestion</td>
+                                    {% endif %}
+
+                                    {% if ecole.specialite == 'TEL' %}
+                                    <td>{{ecole.specialite}} - Telecommunication</td>
+                                    {% elif ecole.specialite == 'BDD' %}
+                                    <td>{{ecole.specialite}} - Bases de donnees</td>
+                                    {% elif ecole.specialite == 'ONE' %}
+                                    <td>{{ecole.specialite}} - Organisations de Net Economie</td>
+                                    {% elif ecole.specialite == 'SDE' %}
+                                    <td>{{ecole.specialite}} - Sciences de l'Entreprise</td>
+                                    {% else %}
+                                    <td>{{ecole.specialite}} - Sciences Comptables</td>
+                                    {% endif %}
+
+                                    {% if ecole.typecours == 'O' %}
+                                    <td>{{ecole.typecours}} - Obligatoire</td>
+                                    {% else %}
+                                    <td>{{ecole.typecours}} - Optionnel</td>
+                                    {% endif %}
+
+                                    {% if ecole.langue == 'AN' %}
+                                    <td>{{ecole.langue}} - Anglais</td>
+                                    {% else %}
+                                    <td>{{ecole.langue}} - Francais</td>
+                                    {% endif %}
+                                    <td>{{ecole.date}}</td>
+                                    <!--<td><a href="../gestion_etablissement/modifier/{{ecole.id}}"> Modifier</a></td>-->
+                                    <!--<td> <a href="../gestion_etablissement/suppression/{{ecole.id}}"> Supprimer </a></td>-->
+									<td>
+										<a href="../gestion_programme/modifier/{{ecole.id}}" class="table-actions-button ic-table-edit" title="Editer"></a>
+										<a href="../gestion_programme/suppression/{{ecole.id}}" class="table-actions-button ic-table-delete" title="Effacer"></a>
+									</td>
+								</tr>
+                                {% endfor %}
+
+							</tbody>
+
+						</table>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+            </div>
+
+    {% endblock %}
+

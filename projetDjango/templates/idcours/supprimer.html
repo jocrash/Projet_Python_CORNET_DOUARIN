@@ -1,0 +1,94 @@
+{% extends "idcourspage.html" %}
+
+
+        {% block listing %}
+
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Supprimer un code cours</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+                        <form method="GET" action="../sauvegarder/{{etab.id}}/" id="bind">
+                            <table>
+                                <tr>
+                                    <td>
+                           <label>Etablissemente :</label>
+                                    </td>
+                                    <td>
+                           <input type="text" value="{{etab.etablissement.nom}}" readonly>
+                                        </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Annee :</label>
+                                        </td>
+                                     <td>
+                           <input type="text" value="{{etab.annee}}" readonly>
+                                         </td>
+                                <td>
+
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Semestre :</label>
+                                        </td>
+                                     <td>
+                           <input type="text" value="{{etab.semestre}}" readonly>
+                                         </td>
+                                <td>
+
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Nom du cours :</label>
+                                        </td>
+                                     <td>
+                           <input type="text" value="{{etab.nomcours}}" readonly>
+                                         </td>
+                                <td>
+
+                                </tr>
+                                     <tr>
+
+                                <td>
+
+                                    </td>
+                                <td style="padding-left:150px" id="delete">
+                                    <input type="submit" value="Supprimer">
+                                    <a class="submit" href="{% url 'gestionIdcours.views.index' %}" >Annuler</a>
+                                </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        {{message}}
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                     </table>
+                        </form>
+
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+            </div>
+{% endblock %}
+
+

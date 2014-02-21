@@ -1,0 +1,252 @@
+{% extends "profpage.html" %}
+
+
+{% block listing %}
+
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">CV de {{prof.prenom}} {{prof.nom}}</h3>
+
+					</div> <!-- end content-module-heading -->
+
+                    {% if find == False %}
+					<div class="content-module-main">
+
+
+                    <center>Le professeur {{prof.prenom}} {{prof.nom}} n'a pas de CV.</center>
+					</div> <!-- end content-module-main -->
+                    {%else%}
+                    <div class="content-module-main">
+
+             <!---- Informations personnelles ------>
+                        <div class="module-heading cf">
+
+						<h3 class="fl">Infomations personnelles</h3>
+
+					    </div>
+
+                        <div class="content-module-main">
+
+                            <table class="bind">
+                                <tr>
+                                    <td>
+                           <label>Nom :</label>
+                                    </td>
+                                    <td>
+                           <input name="nom" type="text" value="{{cv.nom}}" readonly>
+                                        </td>
+                                     <td>
+                           <label>CIN :</label>
+                                        </td>
+                                     <td>
+                           <input name="cin" type="text" value="{{cv.cin}}" readonly>
+                                         </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Prenom :</label>
+                                        </td>
+                                     <td>
+                           <input name="prenom" type="text" value="{{cv.prenom}}" readonly>
+                                         </td>
+                                     <td>
+                           <label>Telephone :</label>
+                                        </td>
+                                     <td>
+                           <input name="telephone" type="text" value="{{cv.telephone}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Sexe :</label>
+                                        </td>
+                                     <td>
+                           <input name="sexe" type="text" value="{{cv.sexe}}" readonly>
+                                         </td>
+                                    <td>
+                           <label>E-mail :</label>
+                                        </td>
+                                     <td>
+                           <input name="email" type="text" value="{{cv.email}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+
+                     </table>
+
+                         </div>
+
+                    <!---- Experience professionnelle ----->
+
+
+                        <div class="module-heading cf">
+
+						<h3 class="fl">Experience professionelle</h3>
+
+					    </div>
+
+                        <div class="content-module-main">
+
+                        <textarea>{{cv.formation}}</textarea>
+
+                         </div>
+
+                   <!--- Education et formation --->
+
+                        <div class="module-heading cf">
+
+						<h3 class="fl">Education et formation</h3>
+
+					    </div>
+
+                        <div class="content-module-main">
+
+                            <table class="bind">
+                                <tr>
+                                    <td>
+                           <label>Nom :</label>
+                                    </td>
+                                    <td>
+                           <input name="nom" type="text" value="{{cv.nom}}" readonly>
+                                        </td>
+                                     <td>
+                           <label>CIN :</label>
+                                        </td>
+                                     <td>
+                           <input name="cin" type="text" value="{{cv.cin}}" readonly>
+                                         </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Prenom :</label>
+                                        </td>
+                                     <td>
+                           <input name="prenom" type="text" value="{{cv.prenom}}" readonly>
+                                         </td>
+                                     <td>
+                           <label>Telephone :</label>
+                                        </td>
+                                     <td>
+                           <input name="telephone" type="text" value="{{cv.telephone}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Sexe :</label>
+                                        </td>
+                                     <td>
+                           <input name="sexe" type="text" value="{{cv.sexe}}" readonly>
+                                         </td>
+                                    <td>
+                           <label>E-mail :</label>
+                                        </td>
+                                     <td>
+                           <input name="email" type="text" value="{{cv.email}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+
+                     </table>
+
+                         </div>
+
+                    <!--- Competences personnelles --->
+
+                    <div class="module-heading cf">
+
+						<h3 class="fl">Competences personnelles</h3>
+
+					    </div>
+
+                        <div class="content-module-main">
+
+                            <table class="bind">
+                                <tr>
+                                    <td>
+                           <label>Nom :</label>
+                                    </td>
+                                    <td>
+                           <input name="nom" type="text" value="{{cv.nom}}" readonly>
+                                        </td>
+                                     <td>
+                           <label>CIN :</label>
+                                        </td>
+                                     <td>
+                           <input name="cin" type="text" value="{{cv.cin}}" readonly>
+                                         </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Prenom :</label>
+                                        </td>
+                                     <td>
+                           <input name="prenom" type="text" value="{{cv.prenom}}" readonly>
+                                         </td>
+                                     <td>
+                           <label>Telephone :</label>
+                                        </td>
+                                     <td>
+                           <input name="telephone" type="text" value="{{cv.telephone}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Sexe :</label>
+                                        </td>
+                                     <td>
+                           <input name="sexe" type="text" value="{{cv.sexe}}" readonly>
+                                         </td>
+                                    <td>
+                           <label>E-mail :</label>
+                                        </td>
+                                     <td>
+                           <input name="email" type="text" value="{{cv.email}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+
+                     </table>
+
+                         </div>
+
+					</div>
+                    {%endif%}
+
+				</div> <!-- end content-module -->
+            </div>
+
+    {% endblock %}

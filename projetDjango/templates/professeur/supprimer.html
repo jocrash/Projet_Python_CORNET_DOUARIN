@@ -1,0 +1,112 @@
+{% extends "profpage.html" %}
+
+
+       {% block listing %}
+
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Ajouter un professeur</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+						<form method="GET" action="../sauvegarder/{{etab.id}}" id="bind">
+                            <table>
+                                <tr>
+                                    <td>
+                           <label>Nom :</label>
+                                    </td>
+                                    <td>
+                           <input name="nom" type="text" value="{{etab.nom}}" readonly>
+                                        </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Prenom :</label>
+                                        </td>
+                                     <td>
+                           <input name="prenom" type="text" value="{{etab.prenom}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Sexe :</label>
+                                        </td>
+                                     <td>
+                           <input name="sexe" type="text" value="{{etab.sexe}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>CIN :</label>
+                                        </td>
+                                     <td>
+                           <input name="cin" type="text" value="{{etab.cin}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Telephone :</label>
+                                        </td>
+                                     <td>
+                           <input name="telephone" type="text" value="{{etab.telephone}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>E-mail :</label>
+                                        </td>
+                                     <td>
+                           <input name="email" type="text" value="{{etab.email}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+                                     <tr>
+
+                                <td>
+
+                                    </td>
+                                <td style="padding-left:245px">
+                                    <input type="submit" value="Supprimer">
+                                </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        {{message}}
+                                    </td>
+                                </tr>
+                     </table>
+                        </form>
+
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+            </div>
+{% endblock %}
+
+

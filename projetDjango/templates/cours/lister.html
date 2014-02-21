@@ -1,0 +1,145 @@
+{% extends "courspage.html" %}
+
+
+
+{% block listing %}
+
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Liste des code cours</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+						<table>
+
+							<thead>
+
+								<tr>
+									<th>Id</th>
+									<th>Code du cours</th>
+									<th>Etablissement</th>
+                                    <th>Professeur</th>
+                                    <th>Titre</th>
+                                    <th>Nombre de credit ECTS</th>
+                                    <th>Public cible</th>
+                                    <th>Prerequis</th>
+								</tr>
+
+							</thead>
+
+							<tfoot>
+
+
+
+							</tfoot>
+
+							<tbody>
+                                {% for ecole in school %}
+								<tr>
+									<td>{{ecole.id}}</td>
+                                    <td>{{ecole.idcours.codecours}}</td>
+                                    <td>{{ecole.etablissement.nom}}</td>
+                                    <td>{{ecole.professeur.prenom}} {{ecole.professeur.nom}}</td>
+                                    <td>{{ecole.titre}}</td>
+                                    <td>{{ecole.creditECTS}}</td>
+                                    <td>{{ecole.public}}</td>
+                                    <td>{{ecole.prerequis}}</td>
+
+                                    <!--<td><a href="../gestion_etablissement/modifier/{{ecole.id}}"> Modifier</a></td>-->
+                                    <!--<td> <a href="../gestion_etablissement/suppression/{{ecole.id}}"> Supprimer </a></td>-->
+								</tr>
+                                {% endfor %}
+
+							</tbody>
+
+						</table>
+
+					</div> <!-- end content-module-main -->
+
+
+
+                    <!-- TABLEAU 2 -->
+
+
+                    <div class="content-module-main">
+
+						<table>
+
+							<thead>
+
+								<tr>
+                                    <th>Objectif</th>
+                                    <th>Description</th>
+                                    <th>Plan du cours</th>
+                                    <th>Format du cours</th>
+                                    <th>Resssources</th>
+                                    <th>Evaluation</th>
+									<th>Date d'ajout</th>
+									<th>Actions</th>
+								</tr>
+
+							</thead>
+
+							<tfoot>
+
+								<tr>
+
+									<td colspan="5" class="table-footer">
+
+										<label for="table-select-actions">With selected:</label>
+
+										<select id="table-select-actions">
+											<option value="option1">Delete</option>
+											<option value="option2">Export</option>
+											<option value="option3">Archive</option>
+										</select>
+
+										<a href="#" class="round button blue text-upper small-button">Apply to selected</a>
+
+									</td>
+
+								</tr>
+
+							</tfoot>
+
+							<tbody>
+                                {% for ecole in school %}
+								<tr>
+                                    <td>{{ecole.objectif}}</td>
+                                    <td>{{ecole.description}}</td>
+                                    <td>{{ecole.plan}}</td>
+                                    <td>{{ecole.formatcours}}</td>
+                                    <td>{{ecole.ressources}}</td>
+                                    <td>{{ecole.evaluation}}</td>
+                                    <td>{{ecole.date}}</td>
+
+                                    <!--<td><a href="../gestion_etablissement/modifier/{{ecole.id}}"> Modifier</a></td>-->
+                                    <!--<td> <a href="../gestion_etablissement/suppression/{{ecole.id}}"> Supprimer </a></td>-->
+									<td>
+										<a href="../gestion_cours/modifier/{{ecole.id}}" class="table-actions-button ic-table-edit" title="Editer"></a>
+										<a href="../gestion_cours/suppression/{{ecole.id}}" class="table-actions-button ic-table-delete" title="Effacer"></a>
+									</td>
+								</tr>
+                                {% endfor %}
+
+							</tbody>
+
+						</table>
+
+					</div> <!-- end content-module-main -->
+
+
+				</div> <!-- end content-module -->
+            </div>
+
+
+
+
+    {% endblock %}
