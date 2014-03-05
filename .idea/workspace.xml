@@ -2,67 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f98ecd09-46ba-47ed-8c08-878af945d2ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/images/newdemo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/js/dx.chartjs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/js/globalize.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/index/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/js/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/js/jquery-2.0.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/js/knockout-3.0.0.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/data/monthWeather.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/data/resourceData.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/data/simpleJSON.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/data/weatherData.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/data/world.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/data/world.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projetDjango/templates/static/api/data/zoomingData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/ajouter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/ajouter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/ajouter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/ajouter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/ajouter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/ajouterCV.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/ajouterCV.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/basePage.html" afterPath="$PROJECT_DIR$/projetDjango/templates/basePage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/courspage.html" afterPath="$PROJECT_DIR$/projetDjango/templates/courspage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/cv.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/cv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/lister.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/lister.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/lister.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/lister.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/lister.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/modifier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/modifier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/modifier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/modifier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/modifier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/sauvegarder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/sauvegarder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/sauvegarder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/sauvegarder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/sauvegarder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/saveCV.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/saveCV.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/savemodification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/savemodification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/savemodification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/savemodification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/savemodification.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/savesuppression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/savesuppression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/savesuppression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/savesuppression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/savesuppression.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/settings.py" afterPath="$PROJECT_DIR$/projetDjango/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/supprimer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/supprimer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/supprimer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/supprimer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/supprimer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/urls.py" afterPath="$PROJECT_DIR$/projetDjango/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gestionCours/views.py" afterPath="$PROJECT_DIR$/gestionCours/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/index/index.html" afterPath="$PROJECT_DIR$/projetDjango/templates/index/index.html" />
     </list>
     <ignored path="projetDjango.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,10 +34,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ajouter.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetDjango/templates/idcours/ajouter.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="29" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2040">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projetDjango/templates/index/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.060714286" vertical-offset="0" max-vertical-offset="935">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projetDjango/templates/login/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="34" selection-start="1563" selection-end="1563" vertical-scroll-proportion="-9.153846" vertical-offset="595" max-vertical-offset="1292">
+            <state line="49" column="34" selection-start="1563" selection-end="1563" vertical-scroll-proportion="-32.03846" vertical-offset="0" max-vertical-offset="1292">
               <folding />
             </state>
           </provider>
@@ -121,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projetDjango/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="43" selection-start="521" selection-end="521" vertical-scroll-proportion="0.5151515" vertical-offset="0" max-vertical-offset="561">
+            <state line="17" column="43" selection-start="521" selection-end="521" vertical-scroll-proportion="-11.56" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
@@ -148,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/projetDjango/templates/professeur/modifier.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/professeur/sauvegarder.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/professeur/saveCV.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/professeur/savemodification.html" />
@@ -164,6 +121,7 @@
         <option value="$PROJECT_DIR$/projetDjango/templates/login/login.html" />
         <option value="$PROJECT_DIR$/projetDjango/settings.py" />
         <option value="$PROJECT_DIR$/projetDjango/wsgi.py" />
+        <option value="$PROJECT_DIR$/projetDjango/templates/index/index.html" />
       </list>
     </option>
   </component>
@@ -260,28 +218,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,14 +430,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19180088" sideWeight="0.67156863" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19180088" sideWeight="0.67156863" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -530,20 +466,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projetDjango/templates/professeur/saveCV.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/templates/professeur/savemodification.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projetDjango/templates/professeur/savesuppression.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="204">
@@ -607,9 +529,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/views.py">
+    <entry file="file://$PROJECT_DIR$/projetDjango/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
+        <state line="96" column="0" selection-start="2348" selection-end="2348" vertical-scroll-proportion="-10.2" vertical-offset="1377" max-vertical-offset="2057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetDjango/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="43" selection-start="521" selection-end="521" vertical-scroll-proportion="-11.56" vertical-offset="0" max-vertical-offset="408">
           <folding />
         </state>
       </provider>
@@ -623,21 +552,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projetDjango/templates/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="34" selection-start="1563" selection-end="1563" vertical-scroll-proportion="-9.153846" vertical-offset="595" max-vertical-offset="1292">
+        <state line="49" column="34" selection-start="1563" selection-end="1563" vertical-scroll-proportion="-32.03846" vertical-offset="0" max-vertical-offset="1292">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/settings.py">
+    <entry file="file://$PROJECT_DIR$/projetDjango/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="2348" selection-end="2348" vertical-scroll-proportion="-10.2" vertical-offset="1377" max-vertical-offset="2057">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="586">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/idcours/ajouter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="43" selection-start="521" selection-end="521" vertical-scroll-proportion="0.5151515" vertical-offset="0" max-vertical-offset="561">
+        <state line="0" column="0" selection-start="0" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.060714286" vertical-offset="0" max-vertical-offset="935">
           <folding />
         </state>
       </provider>
