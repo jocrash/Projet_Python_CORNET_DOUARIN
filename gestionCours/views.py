@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import get_template
 from django.template import Context
@@ -12,11 +12,15 @@ import datetime
 # Create your views here.
 
 def index(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbCours()
     schools = gest.returnAll()
     return render(request, 'cours/lister.html', {'school': schools})
 
 def ajouter(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     id = dbIdcours()
     idcours = id.returnAll()

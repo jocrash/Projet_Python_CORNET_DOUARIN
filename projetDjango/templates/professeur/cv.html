@@ -1,4 +1,4 @@
-{% extends "profpage.html" %}
+{% extends "basepage.html" %}
 
 
 {% block listing %}
@@ -101,7 +101,7 @@
 
                         <div class="content-module-main">
 
-                        <textarea>{{cv.formation}}</textarea>
+                        {% autoescape off %}{{cv.experience}}{% endautoescape%}
 
                          </div>
 
@@ -115,62 +115,13 @@
 
                         <div class="content-module-main">
 
-                            <table class="bind">
-                                <tr>
-                                    <td>
-                           <label>Nom :</label>
-                                    </td>
-                                    <td>
-                           <input name="nom" type="text" value="{{cv.nom}}" readonly>
-                                        </td>
-                                     <td>
-                           <label>CIN :</label>
-                                        </td>
-                                     <td>
-                           <input name="cin" type="text" value="{{cv.cin}}" readonly>
-                                         </td>
-                                    <td>
+                            {% autoescape off %}{{cv.formation}}{% endautoescape%}
 
-                                    </td>
-                                </tr>
-                                 <tr>
-                                     <td>
-                           <label>Prenom :</label>
-                                        </td>
-                                     <td>
-                           <input name="prenom" type="text" value="{{cv.prenom}}" readonly>
-                                         </td>
-                                     <td>
-                           <label>Telephone :</label>
-                                        </td>
-                                     <td>
-                           <input name="telephone" type="text" value="{{cv.telephone}}" readonly>
-                                         </td>
-                                <td>
+                         </div>
 
-                                </td>
+                        <div class="content-module-main">
 
-                                </tr>
-
-                                <tr>
-                                     <td>
-                           <label>Sexe :</label>
-                                        </td>
-                                     <td>
-                           <input name="sexe" type="text" value="{{cv.sexe}}" readonly>
-                                         </td>
-                                    <td>
-                           <label>E-mail :</label>
-                                        </td>
-                                     <td>
-                           <input name="email" type="text" value="{{cv.email}}" readonly>
-                                         </td>
-                                <td>
-
-                                </td>
-                                </tr>
-
-                     </table>
+                            {% autoescape off %}{{cv.etude}}{% endautoescape%}
 
                          </div>
 
@@ -184,62 +135,7 @@
 
                         <div class="content-module-main">
 
-                            <table class="bind">
-                                <tr>
-                                    <td>
-                           <label>Nom :</label>
-                                    </td>
-                                    <td>
-                           <input name="nom" type="text" value="{{cv.nom}}" readonly>
-                                        </td>
-                                     <td>
-                           <label>CIN :</label>
-                                        </td>
-                                     <td>
-                           <input name="cin" type="text" value="{{cv.cin}}" readonly>
-                                         </td>
-                                    <td>
 
-                                    </td>
-                                </tr>
-                                 <tr>
-                                     <td>
-                           <label>Prenom :</label>
-                                        </td>
-                                     <td>
-                           <input name="prenom" type="text" value="{{cv.prenom}}" readonly>
-                                         </td>
-                                     <td>
-                           <label>Telephone :</label>
-                                        </td>
-                                     <td>
-                           <input name="telephone" type="text" value="{{cv.telephone}}" readonly>
-                                         </td>
-                                <td>
-
-                                </td>
-
-                                </tr>
-
-                                <tr>
-                                     <td>
-                           <label>Sexe :</label>
-                                        </td>
-                                     <td>
-                           <input name="sexe" type="text" value="{{cv.sexe}}" readonly>
-                                         </td>
-                                    <td>
-                           <label>E-mail :</label>
-                                        </td>
-                                     <td>
-                           <input name="email" type="text" value="{{cv.email}}" readonly>
-                                         </td>
-                                <td>
-
-                                </td>
-                                </tr>
-
-                     </table>
 
                          </div>
 

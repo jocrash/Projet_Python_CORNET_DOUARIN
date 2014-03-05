@@ -16,7 +16,27 @@
 	
 	<!-- jQuery & JS files -->
 	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
-	<script src="{% static 'js/script.js' %}"></script>
+	    <script src="{% static 'js/script.js' %}"></script>
+		<script src="{% static 'api/js/jquery-1.10.2.min.js' %}"></script>
+		<script src="{% static 'api/js/knockout-3.0.0.js' %}"></script>
+		<script src="{% static 'api/js/globalize.min.js' %}"></script>
+		<script src="{% static 'api/js/dx.chartjs.js' %}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+	$(".initial-expand").hide();
+	$(".module-main").hide();
+
+	$("div.module-heading").click(function(){
+		$(this).next("div.module-main").slideToggle();
+
+		$(this).children(".expand-collapse-text").toggle();
+	});
+
+    });
+    </script>
+
 </head>
 <body>
 
@@ -28,25 +48,12 @@
 			<ul id="nav" class="fl">
 
 				<li class="v-sep"><a href="#" class="round button dark menu-user image-left">Logged in as <strong>admin</strong></a>
-					<ul>
-						<li><a href="#">My Profile</a></li>
-						<li><a href="#">User Settings</a></li>
-						<li><a href="#">Change Password</a></li>
-						<li><a href="#">Log out</a></li>
-					</ul> 
 				</li>
 
-				<li><a href="#" class="round button dark menu-logoff image-left">Log out</a></li>
+				<li><a href="/logout/" class="round button dark menu-logoff image-left">Log out</a></li>
 				
 			</ul> <!-- end nav -->
 
-					
-			<form action="#" method="GET" id="search-form" class="fr">
-				<fieldset>
-					<input type="text" id="search-keyword" class="round button dark ic-search image-right" placeholder="Search..." />
-					<input type="hidden" value="SUBMIT" />
-				</fieldset>
-			</form>
 
 		</div> <!-- end full-width -->	
 	
@@ -57,17 +64,17 @@
 	<!-- HEADER -->
     {% block menu %}
 
-	<!--<div id="header-with-tabs">-->
-		<!--<div class="page-full-width cf">-->
-			<!--<ul id="tabs" class="fl">-->
-				<!--<li><a href='{% url "gestionEtablissement.views.index"  %}' class="active-tab dashboard-tab">Etablissement</a></li>-->
-				<!--<li><a href='{% url "gestionProgramme.views.index"  %}'>Programme</a></li>-->
-				<!--<li><a href="page-other.html">Other page elements</a></li>-->
-			<!--</ul> &lt;!&ndash; end tabs &ndash;&gt;-->
+	<div id="header-with-tabs">
+		<div class="page-full-width cf">
+			<ul id="tabs" class="fl">
+				<li><a href='{% url "gestionEtablissement.views.index"  %}' class="active-tab dashboard-tab">Etablissement</a></li>
+				<li><a href='{% url "gestionProgramme.views.index"  %}'>Programme</a></li>
+				<li><a href="page-other.html">Other page elements</a></li>
+			</ul> <!-- end tabs -->
 
-			<!--<a href="#" id="company-branding-small" class="fr"><img src="images/company-logo.png" alt="Blue Hosting" /></a>-->
-		<!--</div>-->
-	<!--</div>-->
+			<a href="#" id="company-branding-small" class="fr"><img src='{% static "images/ESIH.jpg" %}' alt="ESIH" /></a>
+		</div>
+	</div>
 
     {% endblock %}
 	
@@ -80,17 +87,173 @@
 
             {% block sidemenu %}
 
-			<!--<div class="side-menu fl">-->
+			<div class="side-menu fl">
 
-				<!--<h3>Side Menu</h3>-->
-				<!--<ul>-->
-					<!--<li><a href="#">Ajouter un etablissement</a></li>-->
-					<!--<li><a href="#">Another link</a></li>-->
-					<!--<li><a href="#">A third link</a></li>-->
-					<!--<li><a href="#">Fourth link</a></li>-->
-				<!--</ul>-->
+				<h3>Side Menu</h3>
+                <div >
 
-			<!--</div>-->
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                   <ul>
+                                               <span class="fr expand-collapse-text initial-expand"></span>
+						                        <span class="fr expand-collapse-text "></span>
+                                               <li><a href='#'>Etablissement</a></li>
+						                   </ul>
+
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<ul>
+					     <li>
+                        <ul>
+                            <li><a href="{% url 'gestionEtablissement.views.index' %}">Liste des Etablissements</a></li>
+					        <li><a href="{% url 'gestionEtablissement.views.ajouter' %}">Ajouter un etablissement</a></li>
+				        </ul>
+                    </li>
+                            </ul>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+
+                <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                   <ul>
+                                               <span class="fr expand-collapse-text initial-expand"></span>
+						                        <span class="fr expand-collapse-text "></span>
+
+					                        <li><a href='#'>Programme</a></li>
+						                   </ul>
+
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<ul>
+					     <li>
+                        <ul>
+                            <li><a href="{% url 'gestionProgramme.views.index' %}">Liste des programmes</a></li>
+					        <li><a href="{% url 'gestionProgramme.views.ajouter' %}">Ajouter un programme</a></li>
+				        </ul>
+                    </li>
+                            </ul>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+
+                <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                   <ul>
+                                               <span class="fr expand-collapse-text initial-expand"></span>
+						                        <span class="fr expand-collapse-text "></span>
+
+					                        <li><a href='#}'>Code cours</a>
+						                   </ul>
+
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<ul>
+					     <li>
+                        <ul>
+                            <li><a href="{% url 'gestionIdcours.views.index' %}">Liste des code cours</a></li>
+					        <li><a href="{% url 'gestionIdcours.views.ajouter' %}">Ajouter un code cours</a></li>
+				        </ul>
+                    </li>
+                            </ul>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+
+                 <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                   <ul>
+                                               <span class="fr expand-collapse-text initial-expand"></span>
+						                        <span class="fr expand-collapse-text "></span>
+
+					                        <li><a href='#'>Professeurs</a>
+						                   </ul>
+
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<ul>
+					     <li>
+                        <ul>
+                            <li><a href="{% url 'gestionProfesseur.views.index' %}">Liste des professeurs</a></li>
+					        <li><a href="{% url 'gestionProfesseur.views.ajouter' %}">Ajouter un professeur</a></li>
+				        </ul>
+                    </li>
+                            </ul>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+
+                <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                   <ul>
+                                               <span class="fr expand-collapse-text initial-expand"></span>
+						                        <span class="fr expand-collapse-text "></span>
+
+					                        <li><a href='#'>Cours</a></li>
+						                   </ul>
+
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<ul>
+					     <li>
+                        <ul>
+                            <li><a href="{% url 'gestionCours.views.index' %}">Liste des Cours</a></li>
+					        <li><a href="{% url 'gestionCours.views.ajouter' %}">Ajouter un Cours</a></li>
+				        </ul>
+                    </li>
+                            </ul>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+         </div>
 
             {% endblock %}
 

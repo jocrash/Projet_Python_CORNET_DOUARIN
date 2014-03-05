@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ESIH Login</title>
+	
+	<!-- Stylesheets -->
+    {% load staticfiles %}
+	<script src="{% static 'js/script.js' %}"></script>
+	<link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css">
+
+	<!-- Optimize for mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+</head>
+<body>
+
+<div id="content">
+	
+	<div id="login">
+        <form action="/" method="post">
+            <table>
+                <tr>
+                    <td colspan="2" id="header">
+		            <div id="header-with-tabs">
+		                <div class="page-full-width cf">
+			                <a href="#" id="company-branding-small" class="fr"><img src='{% static "images/ESIH.jpg" %}' alt="ESIH" /></a>
+		                </div>
+                     </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr /></td>
+                </tr>
+                 <tr>
+                    <td colspan="2"><hr /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h2>Login</h2></td>
+                </tr>
+                <tr>
+                    <td>Username : </td>
+                    <td><input type="text" name="username" required="" /></td>
+                </tr>
+                <tr>
+                    <td>Password : </td>
+                    <td><input type="password" name="password" required="" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" class="submit" value="Login" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr /></td>
+                </tr>
+                 <tr>
+                    <td colspan="2"><hr /></td>
+                </tr>
+            </table>
+        </form>
+	</div>
+	
+	<!-- FOOTER -->
+	<div id="footer">
+
+		<p>&copy; Copyright 2014 <a href="#">ESIH</a>. All rights reserved.</p>
+		<p><strong>Created</strong> by <strong>Joel CORNET, Douarin MOISE</strong></p>
+	
+	</div> <!-- end footer -->
+
+</body>
+</html>
