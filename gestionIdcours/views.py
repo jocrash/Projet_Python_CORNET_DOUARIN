@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import get_template
 from django.template import Context
@@ -10,11 +10,15 @@ import datetime
 # Create your views here.
 
 def index(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbIdcours()
     schools = gest.returnAll()
     return render(request, 'idcours/lister.html', {'school': schools})
 
 def ajouter(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     gest = dbEtablissement()
     etab = gest.returnAll()
@@ -23,6 +27,8 @@ def ajouter(request):
     return HttpResponse(html)
 
 def sauvegarder(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     gest = dbEtablissement()
 
@@ -48,6 +54,8 @@ def sauvegarder(request):
 
 
 def modifier(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     idcours = dbIdcours()
     cours = idcours.returnOne(id)
     gest = dbEtablissement()
@@ -55,6 +63,8 @@ def modifier(request,id):
     return render(request, 'idcours/modifier.html',{'etab':cours,'school':etab})
 
 def savemodification(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     gest = dbEtablissement()
     nometab = request.GET['etablissement']
@@ -73,11 +83,15 @@ def savemodification(request,id):
     return render(request, 'idcours/savemodification.html',{'message':message,'etab':ecole,'school':all})
 
 def supprimer(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbIdcours()
     etab = gest.returnOne(id)
     return render(request, 'idcours/supprimer.html',{'etab':etab})
 
 def savesuppression(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbIdcours()
     etab = gest.returnOne(id=id)
 

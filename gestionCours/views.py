@@ -33,6 +33,8 @@ def ajouter(request):
     return HttpResponse(html)
 
 def sauvegarder(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
 
     idcours = request.GET['idcours']
@@ -70,6 +72,8 @@ def sauvegarder(request):
 
 
 def modifier(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     idcours = dbIdcours()
     cours = idcours.returnOne(id)
     gest = dbEtablissement()
@@ -77,6 +81,8 @@ def modifier(request,id):
     return render(request, 'cours/modifier.html',{'etab':cours,'school':etab})
 
 def savemodification(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
 
     idcours = request.GET['idcours']
@@ -102,11 +108,15 @@ def savemodification(request,id):
     return render(request, 'cours/modifier.html',{'message':message,'etab':ecole})
 
 def supprimer(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbIdcours()
     etab = gest.returnOne(id)
     return render(request, 'cours/supprimer.html',{'etab':etab})
 
 def savesuppression(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbIdcours()
     etab = gest.returnOne(id=id)
 

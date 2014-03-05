@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import get_template
 from django.template import Context
@@ -9,17 +9,23 @@ import datetime
 # Create your views here.
 
 def index(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbEtablissement()
     schools = gest.returnAll()
     return render(request, 'etablissement/lister.html', {'school': schools})
 
 def ajouter(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     t = get_template('etablissement/ajouter.html')
     html = t.render(Context({'current_date': now}))
     return HttpResponse(html)
 
 def sauvegarder(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     nom = request.GET['nom']
     lieu = request.GET['lieu']
@@ -37,11 +43,15 @@ def sauvegarder(request):
 
 
 def modifier(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbEtablissement()
     etab = gest.returnOne(id)
     return render(request, 'etablissement/modifier.html',{'etab':etab})
 
 def savemodification(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     nom = request.GET['nom']
     lieu = request.GET['lieu']
@@ -54,11 +64,15 @@ def savemodification(request,id):
     return render(request, 'etablissement/savemodification.html',{'message':message})
 
 def supprimer(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbEtablissement()
     etab = gest.returnOne(id)
     return render(request, 'etablissement/supprimer.html',{'etab':etab})
 
 def savesuppression(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbEtablissement()
 
     if(not gest.returnOne(id=id) == None):

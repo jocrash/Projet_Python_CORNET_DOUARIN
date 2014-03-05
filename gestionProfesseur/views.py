@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import get_template
 from django.template import Context
@@ -10,17 +10,23 @@ import datetime
 # Create your views here.
 
 def index(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbProfesseur()
     schools = gest.returnAll()
     return render(request, 'professeur/lister.html', {'school': schools})
 
 def ajouter(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     t = get_template('professeur/ajouter.html')
     html = t.render(Context({'current_date': now}))
     return HttpResponse(html)
 
 def sauvegarder(request):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     nom = request.GET['nom']
     prenom = request.GET['prenom']
@@ -42,11 +48,15 @@ def sauvegarder(request):
 
 
 def modifier(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbProfesseur()
     etab = gest.returnOne(id)
     return render(request, 'professeur/modifier.html',{'etab':etab})
 
 def savemodification(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     nom = request.GET['nom']
     prenom = request.GET['prenom']
@@ -63,11 +73,15 @@ def savemodification(request,id):
     return render(request, 'professeur/savemodification.html',{'message':message,'etab':etab})
 
 def supprimer(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbProfesseur()
     etab = gest.returnOne(id)
     return render(request, 'professeur/supprimer.html',{'etab':etab})
 
 def savesuppression(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbProfesseur()
     if(not gest.delete(id=id)):
         message = "professeur effacee."
@@ -78,12 +92,16 @@ def savesuppression(request,id):
 #### GESTION CV DU PROFESSEUR ####
 
 def addcv(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbProfesseur()
     prof = gest.returnOne(id)
     cv = gest.returnCV(id)
     return render(request,'professeur/ajouterCV.html',{'etab':prof,'cv':cv})
 
 def saveCV(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     now = datetime.datetime.now()
     nom = request.GET['nom']
     prenom = request.GET['prenom']
@@ -112,6 +130,8 @@ def saveCV(request,id):
 
 
 def viewCV(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
     gest = dbProfesseur()
     prof = gest.returnOne(id)
     cv = gest.returnCV(id)
