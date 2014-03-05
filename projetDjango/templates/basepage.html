@@ -47,7 +47,7 @@
 
 			<ul id="nav" class="fl">
 
-				<li class="v-sep"><a href="#" class="round button dark menu-user image-left">Logged in as <strong>admin</strong></a>
+				<li class="v-sep"><a href="#" class="round button dark menu-user image-left">Logged in as <strong>{% block log %}admin{%endblock%}</strong></a>
 				</li>
 
 				<li><a href="/logout/" class="round button dark menu-logoff image-left">Log out</a></li>
@@ -67,8 +67,9 @@
 	<div id="header-with-tabs">
 		<div class="page-full-width cf">
 			<ul id="tabs" class="fl">
-				<li><a href='{% url "projetDjango.views.index"  %}' class="active-tab dashboard-tab">Home</a></li>
-				<li><a href='{% url "gestionProgramme.views.index"  %}'>Gestion ESIH</a></li>
+				<li><a href='{% url "projetDjango.views.index"  %}'>Home</a></li>
+				<li><a href='{% url "Admin.gestionProgramme.views.index"  %}'>Gestion ESIH</a></li>
+                <li><a href='{% url "projetDjango.views.create"  %}'>Create account</a></li>
 			</ul> <!-- end tabs -->
 
 			<a href="#" id="company-branding-small" class="fr"><img src='{% static "images/ESIH.jpg" %}' alt="ESIH" /></a>
@@ -109,8 +110,8 @@
 						<ul>
 					     <li>
                         <ul>
-                            <li><a href="{% url 'gestionEtablissement.views.index' %}">Liste des Etablissements</a></li>
-					        <li><a href="{% url 'gestionEtablissement.views.ajouter' %}">Ajouter un etablissement</a></li>
+                            <li><a href="{% url 'Admin.gestionEtablissement.views.index' %}">Liste des Etablissements</a></li>
+					        <li><a href="{% url 'Admin.gestionEtablissement.views.ajouter' %}">Ajouter un etablissement</a></li>
 				        </ul>
                     </li>
                             </ul>
@@ -142,8 +143,8 @@
 						<ul>
 					     <li>
                         <ul>
-                            <li><a href="{% url 'gestionProgramme.views.index' %}">Liste des programmes</a></li>
-					        <li><a href="{% url 'gestionProgramme.views.ajouter' %}">Ajouter un programme</a></li>
+                            <li><a href="{% url 'Admin.gestionProgramme.views.index' %}">Liste des programmes</a></li>
+					        <li><a href="{% url 'Admin.gestionProgramme.views.ajouter' %}">Ajouter un programme</a></li>
 				        </ul>
                     </li>
                             </ul>
@@ -175,8 +176,8 @@
 						<ul>
 					     <li>
                         <ul>
-                            <li><a href="{% url 'gestionIdcours.views.index' %}">Liste des code cours</a></li>
-					        <li><a href="{% url 'gestionIdcours.views.ajouter' %}">Ajouter un code cours</a></li>
+                            <li><a href="{% url 'Admin.gestionIdcours.views.index' %}">Liste des code cours</a></li>
+					        <li><a href="{% url 'Admin.gestionIdcours.views.ajouter' %}">Ajouter un code cours</a></li>
 				        </ul>
                     </li>
                             </ul>
@@ -208,8 +209,8 @@
 						<ul>
 					     <li>
                         <ul>
-                            <li><a href="{% url 'gestionProfesseur.views.index' %}">Liste des professeurs</a></li>
-					        <li><a href="{% url 'gestionProfesseur.views.ajouter' %}">Ajouter un professeur</a></li>
+                            <li><a href="{% url 'Admin.gestionProfesseur.views.index' %}">Liste des professeurs</a></li>
+					        <li><a href="{% url 'Admin.gestionProfesseur.views.ajouter' %}">Ajouter un professeur</a></li>
 				        </ul>
                     </li>
                             </ul>
@@ -241,8 +242,8 @@
 						<ul>
 					     <li>
                         <ul>
-                            <li><a href="{% url 'gestionCours.views.index' %}">Liste des Cours</a></li>
-					        <li><a href="{% url 'gestionCours.views.ajouter' %}">Ajouter un Cours</a></li>
+                            <li><a href="{% url 'Admin.gestionCours.views.index' %}">Liste des Cours</a></li>
+					        <li><a href="{% url 'Admin.gestionCours.views.ajouter' %}">Ajouter un Cours</a></li>
 				        </ul>
                     </li>
                             </ul>

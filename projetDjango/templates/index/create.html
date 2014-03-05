@@ -1,29 +1,28 @@
 {% extends "basepage.html" %}
 
+{% block listing %}
 
-        {% block listing %}
-
-        <div class="side-content fr">
+         <div class="side-content fr">
 
 				<div class="content-module">
 
 					<div class="module-heading cf">
 
-						<h3 class="fl">Supprimer un code cours</h3>
+						<h3 class="fl">Creer un compte</h3>
 
 					</div> <!-- end content-module-heading -->
 
 
 					<div class="content-module-main">
 
-                        <form method="GET" action="../sauvegarder/{{etab.id}}/" id="bind">
+						<form method="post" action="../createAccount/sauvegarder/" id="bind">
                             <table>
                                 <tr>
                                     <td>
-                           <label>Etablissemente :</label>
+                           <label>Nom :</label>
                                     </td>
                                     <td>
-                           <input type="text" value="{{etab.etablissement.nom}}" readonly>
+                           <input name="nom" type="text" required="">
                                         </td>
                                     <td>
 
@@ -31,42 +30,60 @@
                                 </tr>
                                  <tr>
                                      <td>
-                           <label>Annee :</label>
+                           <label>Prenom :</label>
                                         </td>
                                      <td>
-                           <input type="text" value="{{etab.annee}}" readonly>
+                           <input name="prenom" type="text" required="">
                                          </td>
                                 <td>
 
+                                </td>
                                 </tr>
-                                <tr>
+                                 <tr>
                                      <td>
-                           <label>Semestre :</label>
+                           <label>Username :</label>
                                         </td>
                                      <td>
-                           <input type="text" value="{{etab.semestre}}" readonly>
+                           <input name="username" type="text" required="Champ vide">
                                          </td>
                                 <td>
 
+                                </td>
                                 </tr>
-                                <tr>
+                                 <tr>
                                      <td>
-                           <label>Nom du cours :</label>
+                           <label>password :</label>
                                         </td>
                                      <td>
-                           <input type="text" value="{{etab.nomcours}}" readonly>
+                           <input name="password" type="password" required="Champ vide">
                                          </td>
                                 <td>
 
+                                </td>
+                                </tr>
+
+                                 <tr>
+                                     <td>
+                           <label>Type account :</label>
+                                        </td>
+                                     <td>
+                           <select name="type" required="">
+                               <option> </option>
+                            <option value="Administrateur">Administrateur</option>
+                            <option value="Professeur">Professeur</option>
+                            </select>
+                                         </td>
+                                <td>
+
+                                </td>
                                 </tr>
                                      <tr>
 
                                 <td>
 
                                     </td>
-                                <td style="padding-left:150px" id="delete">
-                                    <input type="submit" value="Supprimer">
-                                    <a class="submit" href="{% url 'Admin.gestionIdcours.views.index' %}" >Annuler</a>
+                                <td style="padding-left:245px">
+                                    <input type="submit" value="Create">
                                 </td>
 
                                 </tr>
@@ -89,6 +106,5 @@
 
 				</div> <!-- end content-module -->
             </div>
+
 {% endblock %}
-
-

@@ -279,7 +279,7 @@ form label{
      /* padding:40px; */
 }
 
-.bind input[type=text], textarea,select{
+.bind input[type=text],input[type=password], textarea,select{
   padding: 0 10px;
   width: 280px;
   height: 34px;
@@ -287,12 +287,6 @@ form label{
   background: white;
   border: 1px solid;
   border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-}
-form input[type=submit]{
-    background:#3f4551;
-    border:none;
-    color:#fff;
-    padding:15px;
 }
 
 #bind input[type=text], textarea,select{

@@ -1,10 +1,12 @@
+import datetime
+
 from django.shortcuts import render,redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.template.loader import get_template
 from django.template import Context
-from database.dbEtablissement import dbEtablissement
-from database.models import Etablissement
-import datetime
+from Admin.database.dbEtablissement import dbEtablissement
+from Admin.database.models import Etablissement
+
 
 # Create your views here.
 

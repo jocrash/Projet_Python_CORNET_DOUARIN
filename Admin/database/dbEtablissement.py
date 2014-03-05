@@ -1,5 +1,5 @@
 __author__ = 'Joel CORNET'
-from database.models import Etablissement
+from Admin.database.models import Etablissement
 
 class dbEtablissement:
 

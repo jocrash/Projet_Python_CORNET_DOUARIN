@@ -1,10 +1,12 @@
+import datetime
+
+from Admin.database.dbProgramme import dbProgramme
 from django.shortcuts import render,redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.template.loader import get_template
 from django.template import Context
-from database.dbProgramme import dbProgramme
-from database.models import Programme
-import datetime
+from Admin.database.models import Programme
+
 
 # Create your views here.
 

@@ -1,6 +1,6 @@
 __author__ = 'Joel CORNET'
-from database.models import Professeur
-from database.models import CVprof
+from Admin.database.models import Professeur
+from Admin.database.models import CVprof
 
 class dbProfesseur:
 

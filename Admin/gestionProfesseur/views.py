@@ -1,11 +1,13 @@
+import datetime
+
+from Admin.database.dbProfesseur import dbProfesseur
 from django.shortcuts import render,redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.template.loader import get_template
 from django.template import Context
-from database.dbProfesseur import dbProfesseur
-from database.models import Professeur
-from database.models import CVprof
-import datetime
+from Admin.database.models import Professeur
+from Admin.database.models import CVprof
+
 
 # Create your views here.
 

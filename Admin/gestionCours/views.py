@@ -1,13 +1,15 @@
+import datetime
+
+from Admin.database.dbCours import dbCours
 from django.shortcuts import render,redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.template.loader import get_template
 from django.template import Context
-from database.dbIdcours import dbIdcours
-from database.models import Cours
-from database.dbEtablissement import dbEtablissement
-from database.dbProfesseur import dbProfesseur
-from database.dbCours import dbCours
-import datetime
+from Admin.database.dbIdcours import dbIdcours
+from Admin.database.models import Cours
+from Admin.database.dbEtablissement import dbEtablissement
+from Admin.database.dbProfesseur import dbProfesseur
+
 
 # Create your views here.
 

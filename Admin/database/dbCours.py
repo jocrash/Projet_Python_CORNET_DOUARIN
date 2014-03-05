@@ -1,6 +1,6 @@
 __author__ = 'Joel CORNET'
 
-from database.models import Cours
+from Admin.database.models import Cours
 
 class dbCours:
 
