@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f98ecd09-46ba-47ed-8c08-878af945d2ed" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\owner\projetDjango\Script partie 2\DATAdico_parse_error_small.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\owner\projetDjango\Script partie 2\ScriptCracking.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/ajouter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/prof/cv.html" afterPath="$PROJECT_DIR$/projetDjango/templates/prof/cv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/database/dbCours.py" afterPath="$PROJECT_DIR$/Admin/database/dbCours.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/lister.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/prof/listerCours.html" afterPath="$PROJECT_DIR$/projetDjango/templates/prof/listerCours.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/professeur/views.py" afterPath="$PROJECT_DIR$/professeur/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/views.py" afterPath="$PROJECT_DIR$/projetDjango/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Script partie 2/ScriptCracking.py" afterPath="$PROJECT_DIR$/Script partie 2/ScriptCracking.py" />
     </list>
     <ignored path="projetDjango.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -554,7 +545,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
