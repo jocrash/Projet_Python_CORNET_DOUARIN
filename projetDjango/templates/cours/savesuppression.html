@@ -1,7 +1,39 @@
 {% extends "basepage.html" %}
 
-{% block content %}
+{%block log%}{{username}}{%endblock%}
 
-       <p><h2>{{message}}</h2></p>
+{% block listing %}
 
+        <div class="side-content fr">
+
+				<div class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Supprimer un cours</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+                            <table>
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        {{message}}
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                     </table>
+
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+            </div>
 {% endblock %}

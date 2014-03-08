@@ -1,6 +1,6 @@
 {% extends "basepage.html" %}
 
-{% block log%}{{username.username}}{%endblock%}
+{% block log%}{{username}}{%endblock%}
 
 {% block listing %}
 
@@ -9,8 +9,9 @@
 				{
    $("#chartContainer").dxChart({
     dataSource: [
-        {annee: "DUT1", value: 3},
+        {annee: "DUT1", value: 7},
         {annee: "DUT2", value: 2},
+        {annee: "PROP", value: 2},
         {annee: "L1", value: 3},
         {annee: "L2", value: 4},
         {annee: "L3", value: 6},
@@ -26,8 +27,7 @@
     }
 });
 }
-
-			);
+  );
 		</script>
         <div class="side-content fr">
 
@@ -45,7 +45,7 @@
 
 										<select name="cours" id="table-select-actions" onchange="document.getElementsByName('form')[0].submit();">
                                             <option></option>
-											<option value="{{ ecole.id }}">Credit ECTS</option>
+											<option value="{{creditECTS}}">Credit ECTS</option>
                                             <option value="{{horaire}}">Volume Horaire</option>
 										</select>
                               </form>

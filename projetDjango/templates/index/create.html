@@ -1,5 +1,7 @@
 {% extends "basepage.html" %}
 
+        {%block log%}{{username}}{%endblock%}
+
 {% block listing %}
 
          <div class="side-content fr">
@@ -40,7 +42,7 @@
                            <label>Username :</label>
                                         </td>
                                      <td>
-                           <input name="username" type="text" required="Champ vide">
+                           <input name="username" type="text" placeholder="prenom.nom" required="Champ vide">
                                          </td>
                                 <td>
 

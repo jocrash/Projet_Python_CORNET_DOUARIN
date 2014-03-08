@@ -23,10 +23,26 @@
                            <label>Domaine :</label>
                                     </td>
                                     <td>
-                           <select name="domaine" required="">
+                           <select name="domaine" required="" onchange="SetMention(this.value)">
                                <option> </option>
                             <option value="ST">ST - Sciences et Technologies</option>
                             <option value="E&G">E&G - Economie et Gestion</option>
+                               <script>
+                                function SetMention(value) {
+                                    var select=document.getElementById('mention');
+                                    if (value == 'ST'){
+                                        select.innerHTML = "";
+                                        select.add(new Option('',''),length);
+                                        select.add(new Option('SI - Science informatique','SI'),length);
+                                    }
+                                    if (value == "E&G"){
+                                        select.innerHTML = "";
+                                        select.add(new Option('',''),length);
+                                        select.add(new Option('E&G - Economie et Gestion','E&G'),length);
+                                    }
+
+                                }
+                            </script>
                             </select>
                                         </td>
                                <tr>
@@ -35,10 +51,29 @@
 
                                     </td>
                                 <td>
-                                    <select name="mention" required="">
+                                    <select name="mention" id="mention" required="" onchange="setspecialite(this.value)">
                                         <option> </option>
-                                    <option value="SI">SI - Science Informatique</option>
-                                    <option value="E&G">E&G - Economie et Gestion</option>
+                                        <script>
+                                            function setspecialite(value) {
+                                                var select=document.getElementById('speciality');
+                                                if (value == 'SI'){
+                                                    select.innerHTML = "";
+                                                    select.add(new Option('',''),length);
+                                                    select.add(new Option('TEL - Telecommunications','TEL'),length);
+                                                    select.add(new Option('BDD - Bases de Donnees','BDD'),length);
+                                                    select.add(new Option('NOSP - Pas de specialite','NOSP'),length);
+                                                }
+                                                if (value == "E&G"){
+                                                    select.innerHTML = "";
+                                                    select.add(new Option('',''),length);
+                                                    select.add(new Option('ONE - Organisations de Net Economie','ONE'),length);
+                                                    select.add(new Option('SDE - Sciences de l\'Entreprise','SDE'),length);
+                                                    select.add(new Option('SC - Sciences Comptables','SC'),length);
+                                                    select.add(new Option('NOSP - Pas de specialite','NOSP'),length);
+                                                }
+
+                                            }
+                                        </script>
                                     </select>
                                 </td>
                                </tr>
@@ -48,13 +83,8 @@
                                         <label>Specialite :</label>
                                     </td>
                                     <td>
-                                        <select name="specialite" required="">
+                                        <select name="specialite" id="speciality" required="">
                                             <option> </option>
-                                        <option value="TEL">TEL - Telecommunications</option>
-                                        <option value="BDD">BDD - Bases de Donnees</option>
-                                        <option value="ONE">ONE - Organisations de Net Economie</option>
-                                        <option value="SDE">SDE - Sciences de l'Entreprise</option>
-                                        <option value="SC">SC - Sciences Comptables</option>
                                         </select>
                                     </td>
                                 </tr>

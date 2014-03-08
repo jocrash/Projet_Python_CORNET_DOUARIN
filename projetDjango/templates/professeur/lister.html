@@ -1,5 +1,6 @@
 {% extends "basepage.html" %}
 
+{%block log%}{{username}}{%endblock%}
 
 {% block listing %}
 
@@ -39,17 +40,9 @@
 
 								<tr>
 
-									<td colspan="5" class="table-footer">
+									<td colspan="10" class="table-footer">
 
-										<label for="table-select-actions">With selected:</label>
-
-										<select id="table-select-actions">
-											<option value="option1">Delete</option>
-											<option value="option2">Export</option>
-											<option value="option3">Archive</option>
-										</select>
-
-										<a href="#" class="round button blue text-upper small-button">Apply to selected</a>
+										<a class="submit" style="float:right;" href="{% url 'Admin.gestionProfesseur.views.ajouter' %}">Ajouter</a>
 
 									</td>
 

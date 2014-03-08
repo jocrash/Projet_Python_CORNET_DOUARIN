@@ -13,7 +13,7 @@ class Programme(models.Model):
     specialite = models.CharField(max_length=10)
     typecours = models.CharField(max_length=10)
     langue = models.CharField(max_length=10)
-    #codeprogramme = models.CharField(max_length=500)
+    codeprogramme = models.CharField(max_length=500)
     date = models.DateTimeField()
 
 class Idcours(models.Model):
@@ -23,6 +23,10 @@ class Idcours(models.Model):
     nomcours = models.CharField(max_length=100)
     codecours = models.CharField(max_length=500)
     date = models.DateTimeField()
+
+class Codecours_Programme(models.Model):
+    idcours = models.ForeignKey(Idcours)
+    programme = models.ForeignKey(Programme)
 
 class Professeur(models.Model):
     nom = models.CharField(max_length=100)
@@ -63,6 +67,10 @@ class Cours(models.Model):
     ressources = models.TextField()
     evaluation = models.TextField()
     date = models.DateTimeField()
+
+class Cours_programme(models.Model):
+    cours = models.ForeignKey(Cours)
+    programme = models.ForeignKey(Programme)
 
 class Users(models.Model):
     professeur = models.ForeignKey(Professeur)

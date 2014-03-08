@@ -26,6 +26,7 @@
 									<th>Specialite</th>
 									<th>Type cours</th>
                                     <th>Langue</th>
+                                    <th>Code programme</th>
                                     <th>Date d'ajout</th>
                                     <th>Actions</th>
 								</tr>
@@ -36,17 +37,9 @@
 
 								<tr>
 
-									<td colspan="5" class="table-footer">
+									<td colspan="9" class="table-footer">
 
-										<label for="table-select-actions">With selected:</label>
-
-										<select id="table-select-actions">
-											<option value="option1">Delete</option>
-											<option value="option2">Export</option>
-											<option value="option3">Archive</option>
-										</select>
-
-										<a href="#" class="round button blue text-upper small-button">Apply to selected</a>
+										<a type="button" class="submit" style="float:right;" href="{% url 'Admin.gestionProgramme.views.ajouter' %}" >Ajouter</a>
 
 									</td>
 
@@ -78,7 +71,7 @@
                                     {% elif ecole.specialite == 'ONE' %}
                                     <td>{{ecole.specialite}} - Organisations de Net Economie</td>
                                     {% elif ecole.specialite == 'SDE' %}
-                                    <td>{{ecole.specialite}} - Sciences de l'Entreprise</td>
+                                    <td>{{ecole.specialite}} - Sciences de l\'Entreprise</td>
                                     {% else %}
                                     <td>{{ecole.specialite}} - Sciences Comptables</td>
                                     {% endif %}
@@ -94,6 +87,7 @@
                                     {% else %}
                                     <td>{{ecole.langue}} - Francais</td>
                                     {% endif %}
+                                    <td>{{ecole.codeprogramme}}</td>
                                     <td>{{ecole.date}}</td>
                                     <!--<td><a href="../gestion_etablissement/modifier/{{ecole.id}}"> Modifier</a></td>-->
                                     <!--<td> <a href="../gestion_etablissement/suppression/{{ecole.id}}"> Supprimer </a></td>-->

@@ -6,13 +6,11 @@
 
         <div  class="side-content fr">
 
-            <input type="button" class="submit" value="Imprimer" onclick="PrintElem('#cv')" />
-
 				<div id="cv" class="content-module">
 
 					<div class="module-heading cf">
 
-						<h3 class="fl">CV de {{prof.prenom}} {{prof.nom}}</h3>
+						<h3 class="fl">Details</h3>
 
 					</div> <!-- end content-module-heading -->
 
@@ -28,9 +26,9 @@
 
              <!---- Informations personnelles ------>
                         <div class="module-heading cf">
-                                <div class="info">
-						<h3 class="fl">Infomations personnelles</h3>
-                            </div>
+
+						<h3 class="fl">Le cours de {{school.titre}}</h3>
+
 					    </div>
                            <hr />
                         <div class="content-module-main">
@@ -38,16 +36,16 @@
                             <table class="bind">
                                 <tr>
                                     <td>
-                           <label>Nom :</label>
+                           <label>Titre : </label>
                                     </td>
                                     <td>
-                           <label name="nom" type="text" value="{{cv.nom}}">{{cv.nom}}</label>
+                           <label name="nom" type="text" value="{{cv.nom}}">{{school.titre}}</label>
                                         </td>
                                      <td>
-                           <label>CIN :</label>
+                           <label>Professeur : </label>
                                         </td>
                                      <td>
-                           <label name="cin" type="text" value="{{cv.cin}}" >{{cv.cin}}</label>
+                           <label name="cin" type="text" value="{{cv.cin}}" >{{school.professeur.prenom}} {{school.professeur.nom}}</label>
                                          </td>
                                     <td>
 
@@ -55,16 +53,16 @@
                                 </tr>
                                  <tr>
                                      <td>
-                           <label>Prenom :</label>
+                           <label>Etablissement : </label>
                                         </td>
                                      <td>
-                           <label name="prenom" type="text" value="{{cv.prenom}}">{{cv.prenom}}</label>
+                           <label name="prenom" type="text" value="{{cv.prenom}}">{{school.etablissement.nom}}</label>
                                          </td>
                                      <td>
-                           <label>Telephone :</label>
+                           <label>Credit ECTS : </label>
                                         </td>
                                      <td>
-                           <label name="telephone" type="text" value="{{cv.telephone}}">{{cv.telephone}}</label>
+                           <label name="telephone" type="text" value="{{cv.telephone}}">{{school.creditECTS}}</label>
                                          </td>
                                 <td>
 
@@ -74,16 +72,16 @@
 
                                 <tr>
                                      <td>
-                           <label>Sexe :</label>
+                           <label>Code du cours : </label>
                                         </td>
                                      <td>
-                           <label name="sexe" type="text" value="{{cv.sexe}}">{{cv.sexe}}</label>
+                           <label name="sexe" type="text" value="{{cv.sexe}}">{{school.idcours.codecours}}</label>
                                          </td>
                                     <td>
-                           <label>E-mail :</label>
+                           <label>Public cible :</label>
                                         </td>
                                      <td>
-                           <label name="email" type="text" value="{{cv.email}}">{{cv.email}}</label>
+                           <label name="email" type="text" value="{{cv.email}}">{{school.public}}</label>
                                          </td>
                                 <td>
 
@@ -98,15 +96,15 @@
 
 
                         <div class="module-heading cf">
-                            <div class="info">
-						<h3 class="fl">Experience professionelle</h3>
-                            </div>
+
+						<h3 class="fl">Objectif</h3>
+
 					    </div>
                         <hr />
 
                         <div class="content-module-main">
                         <div class="info">
-                        {% autoescape off %}{{cv.experience}}{% endautoescape%}
+                        {% autoescape off %}{{school.objectif}}{% endautoescape%}
                             </div>
 
                          </div>
@@ -115,7 +113,7 @@
 
                         <div class="module-heading cf">
                             <div class="info">
-						<h3 class="fl">Formation</h3>
+						<h3 class="fl">Pre-requis</h3>
 
                             </div>
 
@@ -124,13 +122,13 @@
                         <hr />
                         <div class="content-module-main">
                                 <div class="info">
-                            {% autoescape off %}{{cv.formation}}{% endautoescape%}
+                            {% autoescape off %}{{school.prerequis}}{% endautoescape%}
                                 </div>
                          </div>
 
                         <div class="module-heading cf">
                             <div class="info">
-						<h3 class="fl">Education</h3>
+						<h3 class="fl">Description</h3>
 
                             </div>
 
@@ -138,7 +136,7 @@
                             <hr />
                         <div class="content-module-main">
                                 <div class="info">
-                            {% autoescape off %}{{cv.etude}}{% endautoescape%}
+                            {% autoescape off %}{{school.description}}{% endautoescape%}
                                 </div>
                          </div>
 
@@ -146,29 +144,53 @@
 
                     <div class="module-heading cf">
                             <div class="info">
-						<h3 class="fl">Langues</h3>
+						<h3 class="fl">Plan du cours</h3>
 
                                 </div>
 					    </div>
                         <hr />
 
                         <div class="content-module-main">
-                            {% autoescape off %}{{cv.langue}}{% endautoescape%}
+                            {% autoescape off %}{{school.plan}}{% endautoescape%}
 
                          </div>
 
-                    <!--  References -->
-
                         <div class="module-heading cf">
                             <div class="info">
-						<h3 class="fl">References</h3>
+						<h3 class="fl">format du cours</h3>
 
                                 </div>
 					    </div>
                         <hr />
 
                         <div class="content-module-main">
-                            {% autoescape off %}{{cv.reference}}{% endautoescape%}
+                            {% autoescape off %}{{school.formatcours}}{% endautoescape%}
+
+                         </div>
+
+                        <div class="module-heading cf">
+                            <div class="info">
+						<h3 class="fl">Ressources</h3>
+
+                                </div>
+					    </div>
+                        <hr />
+
+                        <div class="content-module-main">
+                            {% autoescape off %}{{school.ressources}}{% endautoescape%}
+
+                         </div>
+
+                        <div class="module-heading cf">
+                            <div class="info">
+						<h3 class="fl">Evaluation</h3>
+
+                                </div>
+					    </div>
+                        <hr />
+
+                        <div class="content-module-main">
+                            {% autoescape off %}{{school.evaluation}}{% endautoescape%}
 
                          </div>
 

@@ -14,6 +14,7 @@ from Admin.database.dbCours import dbCours
 from Admin.database.dbIdcours import dbIdcours
 from Admin.database.dbEtablissement import dbEtablissement
 from Admin.database.dbCours import Cours
+from Admin.database.models import CVprof
 
 # Create your views here.
 
@@ -49,47 +50,130 @@ def index(request):
     gest = dbCours()
     schools = gest.returnAll()
     cours = []
+    try:
+        id = request.POST['cours']
+        cours = gest.returnOne(id)
+    except:
+        pass
+    return render(request, 'prof/lister.html', {'school': schools,'ecole':cours,'username':username['idsession']})
+
+def details(request,id):
+    username = request.session
+    if 'idsession' not in request.session:
+        return redirect("/")
+    gest = dbCours()
+    schools = gest.returnOne(id=id)
+    cours = []
+    # try:
+    #     id = request.POST['cours']
+    #     cours = gest.returnOne(id)
+    # except:
+    #     pass
+    return render(request, 'prof/details.html', {'school': schools,'username':username['idsession']})
+
+def addcv(request):
+    username = request.session
+    gests = dbUsers()
+    idprof = gests.returnOne(username['idsession'])
+    if 'idsession' not in request.session:
+        return redirect("/")
+    gest = dbProfesseur()
+    prof = gest.returnOne(idprof.id)
+    cv = gest.returnCV(idprof.id)
+    return render(request,'prof/ajouterCV.html',{'etab':prof,'cv':cv,'username':username['idsession']})
+
+def saveCV(request):
+    username = request.session
+    gests = dbUsers()
+    idprof = gests.returnOne(username['idsession'])
+    if 'idsession' not in request.session:
+        return redirect("/")
+    now = datetime.datetime.now()
+    nom = request.GET['nom']
+    prenom = request.GET['prenom']
+    sexe = request.GET['sexe']
+    cin = request.GET['cin']
+    telephone = request.GET['telephone']
+    email = request.GET['email']
+    formation = request.GET['formation']
+    etude = request.GET['etude']
+    experience = request.GET['experience']
+    langue = request.GET['langue']
+    reference = request.GET['reference']
+
+    etab = dbProfesseur()
+    idprof = etab.returnOne(idprof)
+    ecole = CVprof(idprof=idprof,nom=nom,prenom=prenom,cin=cin,sexe=sexe,telephone=telephone,email=email,formation=formation,etude=etude,experience=experience,langue=langue,reference=reference,date=now)
+
+    if(not etab.isCVExist(idprof=idprof,nom=nom,prenom=prenom,cin=cin,sexe=sexe,telephone=telephone,email=email,formation=formation,etude=etude,experience=experience,langue=langue,reference=reference)):
+        if(not etab.saveCV(ecole)):
+            message = "CV ajouter !"
+        else:
+            message = "CV non ajouter."
+    else:
+        message = "le CV du professeur {} {} existe deja.".format(prenom,nom)
+    return render(request, 'prof/saveCV.html',{'etab':ecole,'message': message,'username':username['idsession']})
+
+def viewCV(request):
+    username = request.session
+    if 'idsession' not in request.session:
+        return redirect("/")
+    gest = dbProfesseur()
+    gests = dbUsers()
+    idprof = gests.returnOne(username['idsession'])
+    prof = gest.returnOne(idprof.id)
+    cv = gest.returnCV(idprof.id)
+    if(not cv==None):
+        message = ""
+        find = True
+    else:
+        message = "Vous n'avez pas encore enregistrer votre CV. "
+        find = False
+    return render(request,'prof/cv.html',{'cv':cv, 'prof':prof,'message':message,'find':find,'username':username['idsession']})
+
+
+def cours(request):
+    username = request.session
+    if 'idsession' not in request.session:
+        return redirect("/")
+    gest = dbCours()
+    schools = gest.returnAll()
+    cours = []
     courProf = []
     gests = dbUsers()
-    idprof = gests.returnOne(username)
+    idprof = gests.returnOne(username['idsession'])
     for list in schools:
-        if idprof == list.professeur.id:
+        if idprof.id == list.professeur.id:
             courProf.append(list)
     try:
         id = request.POST['cours']
         cours = gest.returnOne(id)
     except:
         pass
-    return render(request, 'prof/listerCours.html', {'school': courProf,'ecole':cours,'username':username})
+    return render(request, 'prof/listerCours.html', {'school': courProf,'ecole':cours,'username':username['idsession']})
 
-def viewCV(request,id):
+def ajouter(request):
+    now = datetime.datetime.now()
     if 'idsession' not in request.session:
         return redirect("/")
-    gest = dbProfesseur()
-    prof = gest.returnOne(id)
-    cv = gest.returnCV(id)
-    if(not cv==None):
-        message = ""
-        find = True
-    else:
-        message = "le professeur {} {} n'a pas de CV.".format(prof.prenom,prof.nom)
-        find = False
-    return render(request,'prof/cv.html',{'cv':cv, 'prof':prof,'message':message,'find':find})
+    try:
+        cours = request.POST['cours']
+        objectif = request.POST['objectif']
+        description = request.POST['description']
+        plan = request.POST['plan']
+        formatcours = request.POST['formatcours']
+        ressources = request.POST['ressources']
+        evaluation = request.POST['evaluation']
+        gest = dbCours()
+        gest.fiche(id=cours,objectif=objectif,description=description,plan=plan,formatcours=formatcours,ressources=ressources,evaluation=evaluation,date=now)
+    except:
+        message = "Fiche non remplie."
+    message = "Cours enregistrer !"
+    t = get_template('prof/cours.html')
+    html = t.render(Context({'current_date': now,'message':message}))
+    return HttpResponse(html)
 
 
-# def cours(request):
-#     if 'idsession' not in request.session:
-#         return redirect("/")
-#     gest = dbCours()
-#     schools = gest.returnAll()
-#     cours = []
-#     try:
-#         id = request.POST['cours']
-#         cours = gest.returnOne(id)
-#     except:
-#         pass
-#     return render(request, 'prof/listerCours.html', {'school': schools,'ecole':cours})
-#
 # def ajouter(request):
 #     if 'idsession' not in request.session:
 #         return redirect("/")

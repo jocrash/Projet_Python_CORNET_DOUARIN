@@ -10,9 +10,10 @@ class dbUsers:
     def modify(self,id,nom,prenom,username,password,date):
         Users.objects.filter(id=id).update(nom=nom,prenom=prenom,username=username,password=password,date=date)
 
-    def returnOne(self,id):
+    def returnOne(self,username):
         try:
-            professeur = Users.objects.get(id=id)
+            user = Users.objects.get(username=username)
+            professeur=user.professeur
             return professeur
         except:
             return None

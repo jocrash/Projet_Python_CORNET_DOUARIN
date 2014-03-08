@@ -17,6 +17,13 @@ class dbIdcours:
         except:
             return None
 
+    def returnID(self,codecours):
+        try:
+            idcours = Idcours.objects.get(codecours=codecours)
+            return idcours
+        except:
+            return None
+
 
     def delete(self,id):
         Idcours.objects.filter(id=id).delete()

@@ -10,8 +10,11 @@ urlpatterns = patterns('professeur.views',
 
     url(r'^$','index'),
     # url(r'^profile/(\d+)/','viewCV'),
-    # url(r'^cours/','cours'),
-    # url(r'^cours/(\d+)/','ajouter'),
+    url(r'^cours/remplirFiche/','ajouter'),
+    url(r'^cours/(\d+)/','details'),
+    url(r'^fiche/','cours'),
+    url(r'^monCV/','viewCV'),
+    url(r'^CV/','addcv'),
 
 
 )

@@ -5,12 +5,12 @@
 {% block listing %}
 
         <div class="side-content fr">
- <input type="button" class="submit" value="Imprimer" onclick="PrintElem('#codecours')" />
+
 				<div id="codecours" class="content-module">
 
 					<div class="module-heading cf">
 
-						<h3 class="fl">Liste des code cours</h3>
+						<h3 class="fl">Fiche</h3>
 
 					</div> <!-- end content-module-heading -->
 
@@ -21,7 +21,7 @@
                                 <tr>
 
                                     <td colspan="2" class="table-footer">
-                                    <form name="form" action="" method="post">
+                                   <!-- <form name="form" action="" method="post">
 										<label for="table-select-actions">Cours :</label>
 
 										<select name="cours" id="table-select-actions" onchange="document.getElementsByName('form')[0].submit();">
@@ -31,7 +31,7 @@
                                             {%endfor%}
 										</select>
 
-                                       </form>
+                                       </form>-->
                                       </td>
                                    </tr>
                             <tr>
@@ -40,7 +40,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                    <td>
+                                    <!--<td>
                            <label>Code cours :</label>
                                     </td>
                                     <td>
@@ -50,13 +50,13 @@
                             <option value="{{ecole.id}}">{{ecole.codecours}}</option>
                                {%endfor%}
                             </select>
-                                        </td>
+                                        </td>-->
                                     <td>
 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                   <!-- <td>
                            <label>Etablissement :</label>
                                     </td>
                                     <td>
@@ -66,13 +66,13 @@
                             <option value="{{ecole.id}}">{{ecole.nom}}</option>
                                {%endfor%}
                             </select>
-                                        </td>
+                                        </td>-->
                                     <td>
 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                   <!-- <td>
                            <label>Professeur :</label>
                                     </td>
                                     <td>
@@ -82,115 +82,115 @@
                             <option value="{{ecole.id}}">{{ecole.prenom}} {{ecole.nom}}</option>
                                {%endfor%}
                             </select>
-                                        </td>
+                                        </td>-->
                                     <td>
 
                                     </td>
                                 </tr>
 
                                  <tr>
-                                     <td>
+                                     <!--<td>
                            <label>Titre :</label>
                                         </td>
                                      <td>
                                         <input type="text" name="titre" required="">
                                          </td>
                                 <td>
-
+-->
                                 </tr>
                                 <tr>
-                                     <td>
+                                     <!--<td>
                            <label>Credit ECTS :</label>
                                         </td>
                                      <td>
                                         <input type="text" name="creditECTS" required="">
                                          </td>
-                                <td>
+                                <td>-->
 
                                 </tr>
                                 <tr>
-                                     <td>
+                                     <!--<td>
                            <label>Public cible :</label>
                                         </td>
                                      <td>
                                         <input type="text" name="public" required="">
-                                         </td>
+                                         </td>-->
                                 <td>
 
                                 </tr>
 
                                 <tr>
-                                     <td>
+                                    <!-- <td>
                            <label>Pre-requis :</label>
                                         </td>
                                      <td>
                                         <input type="text" name="prerequis" required="">
                                          </td>
                                 <td>
-
+-->
                                 </tr>
                                 <tr>
-                                     <td>
+                                    <!-- <td>
                            <label>Objectif :</label>
                                         </td>
                                      <td>
                                         <textarea type="text" name="objectif" required=""></textarea>
                                          </td>
                                 <td>
-
+-->
                                 </tr>
 
                                 <tr>
                                      <tr>
-                                     <td>
+                                    <!-- <td>
                            <label>Description :</label>
                                         </td>
                                      <td>
                                         <textarea type="text" name="description" required=""></textarea>
                                          </td>
-                                <td>
+                                <td>-->
 
                                 </tr>
 
                                 <tr>
-                                     <td>
+                                     <!--<td>
                            <label>Plan du Cours :</label>
                                         </td>
                                      <td>
                                         <textarea type="text" name="plan" required=""></textarea>
                                          </td>
                                 <td>
-
+-->
                                 </tr>
 
                                 <tr>
-                                     <td>
+                                     <!--<td>
                            <label>Format du cours :</label>
                                         </td>
                                      <td>
                                         <input type="text" name="formatcours" required="">
                                          </td>
-                                <td>
+                                <td>-->
 
                                 </tr>
                                  <tr>
-                                     <td>
+                                     <!--<td>
                            <label>Ressources :</label>
                                         </td>
                                      <td>
                                         <textarea type="text" name="ressources" required=""></textarea>
                                          </td>
-                                <td>
+                                <td>-->
 
                                 </tr>
                                  <tr>
-                                     <td>
+                                     <!--<td>
                            <label>Evaluation:</label>
                                         </td>
                                      <td>
                                         <textarea type="text" name="evaluation" required=""></textarea>
                                          </td>
-                                <td>
+                                <td>-->
 
                                 </tr>
 
@@ -199,11 +199,11 @@
 
                                 <td>
 
-                                    </td>
+                                   <!-- </td>
                                 <td style="padding-left:145px">
                                     <input type="submit" value="Ajouter">
                                     <a class="submit" href="{% url 'professeur.views.index' %}" >Annuler</a>
-                                </td>
+                                </td>-->
 
                                 </tr>
                                 <tr>

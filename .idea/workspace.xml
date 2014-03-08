@@ -1,7 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f98ecd09-46ba-47ed-8c08-878af945d2ed" name="Default" comment="" />
+    <list default="true" id="f98ecd09-46ba-47ed-8c08-878af945d2ed" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\owner\projetDjango\basePage_copy.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/static/css/login.css" afterPath="$PROJECT_DIR$/projetDjango/templates/static/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/static/css/style.css" afterPath="$PROJECT_DIR$/projetDjango/templates/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/ajouter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/ajouter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/ajouter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/ajouter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/ajouter.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/ajouter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/prof/ajouterCV.html" afterPath="$PROJECT_DIR$/projetDjango/templates/prof/ajouterCV.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/ajouterCV.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/ajouterCV.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/basepage.html" afterPath="$PROJECT_DIR$/projetDjango/templates/basepage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/prof/cours.html" afterPath="$PROJECT_DIR$/projetDjango/templates/prof/cours.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/index/create.html" afterPath="$PROJECT_DIR$/projetDjango/templates/index/create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/prof/cv.html" afterPath="$PROJECT_DIR$/projetDjango/templates/prof/cv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/cv.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/cv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/database/dbCours.py" afterPath="$PROJECT_DIR$/Admin/database/dbCours.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/database/dbIdcours.py" afterPath="$PROJECT_DIR$/Admin/database/dbIdcours.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/database/dbProgramme.py" afterPath="$PROJECT_DIR$/Admin/database/dbProgramme.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/database/dbUsers.py" afterPath="$PROJECT_DIR$/Admin/database/dbUsers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/index/index.html" afterPath="$PROJECT_DIR$/projetDjango/templates/index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/lister.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/lister.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/lister.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/lister.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/programme/lister.html" afterPath="$PROJECT_DIR$/projetDjango/templates/programme/lister.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/prof/listerCours.html" afterPath="$PROJECT_DIR$/projetDjango/templates/prof/listerCours.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/login/login.html" afterPath="$PROJECT_DIR$/projetDjango/templates/login/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/database/models.py" afterPath="$PROJECT_DIR$/Admin/database/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/modifier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/modifier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/modifier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/modifier.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/modifier.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/prof/profile.html" afterPath="$PROJECT_DIR$/projetDjango/templates/prof/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/profpage.html" afterPath="$PROJECT_DIR$/projetDjango/templates/profpage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/sauvegarder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/sauvegarder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/sauvegarder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/sauvegarder.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/sauvegarder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/saveCV.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/saveCV.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/savemodification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/savemodification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/savemodification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/savemodification.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/savemodification.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/savesuppression.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/savesuppression.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/savesuppression.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/savesuppression.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/savesuppression.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/cours/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/cours/supprimer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/etablissement/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/etablissement/supprimer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/idcours/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/idcours/supprimer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/templates/professeur/supprimer.html" afterPath="$PROJECT_DIR$/projetDjango/templates/professeur/supprimer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/gestionCours/urls.py" afterPath="$PROJECT_DIR$/Admin/gestionCours/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/professeur/urls.py" afterPath="$PROJECT_DIR$/professeur/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/gestionCours/views.py" afterPath="$PROJECT_DIR$/Admin/gestionCours/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/gestionEtablissement/views.py" afterPath="$PROJECT_DIR$/Admin/gestionEtablissement/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/gestionIdcours/views.py" afterPath="$PROJECT_DIR$/Admin/gestionIdcours/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/gestionProfesseur/views.py" afterPath="$PROJECT_DIR$/Admin/gestionProfesseur/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Admin/gestionProgramme/views.py" afterPath="$PROJECT_DIR$/Admin/gestionProgramme/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/professeur/views.py" afterPath="$PROJECT_DIR$/professeur/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/views.py" afterPath="$PROJECT_DIR$/projetDjango/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="projetDjango.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,57 +85,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetDjango/settings.py">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetDjango/templates/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="0" selection-start="2331" selection-end="2331" vertical-scroll-proportion="-8.8" vertical-offset="1395" max-vertical-offset="2057">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/professeur/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="4" selection-start="1551" selection-end="1551" vertical-scroll-proportion="-0.88" vertical-offset="743" max-vertical-offset="2533">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profpage.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetDjango/templates/profpage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="41" selection-start="4549" selection-end="4549" vertical-scroll-proportion="-46.0" vertical-offset="1643" max-vertical-offset="3587">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listerCours.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetDjango/templates/prof/listerCours.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="52" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-11.538462" vertical-offset="227" max-vertical-offset="4012">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cours.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projetDjango/templates/prof/cours.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="78" selection-start="630" selection-end="630" vertical-scroll-proportion="-12.692307" vertical-offset="61" max-vertical-offset="4012">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/gestionCours/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="34" selection-start="656" selection-end="656" vertical-scroll-proportion="-6.88" vertical-offset="202" max-vertical-offset="2652">
+            <state line="23" column="24" selection-start="553" selection-end="553" vertical-scroll-proportion="-12.576923" vertical-offset="64" max-vertical-offset="1139">
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetDjango/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="39" selection-start="1548" selection-end="1548" vertical-scroll-proportion="-12.0" vertical-offset="482" max-vertical-offset="1581">
+              <folding>
+                <element signature="e#28#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,30 +116,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/professeur/urls.py">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projetDjango/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="404" selection-end="404" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="357">
+            <state line="107" column="27" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.7361854" vertical-offset="1406" max-vertical-offset="2057">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Admin/gestionProfesseur/urls.py">
+      <file leaf-file-name="basepage.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projetDjango/templates/basepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="561">
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="57.0" vertical-offset="1482" max-vertical-offset="5355">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Admin/database/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="46" selection-start="2444" selection-end="2444" vertical-scroll-proportion="0.63703704" vertical-offset="795" max-vertical-offset="1360">
+            <state line="61" column="48" selection-start="2239" selection-end="2239" vertical-scroll-proportion="-10.32" vertical-offset="779" max-vertical-offset="1496">
               <folding />
             </state>
           </provider>
@@ -135,22 +161,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/projetDjango/templates/prof/ajouterCV.html" />
-        <option value="$PROJECT_DIR$/projetDjango/templates/prof/cv.html" />
-        <option value="$PROJECT_DIR$/projetDjango/templates/prof/profile.html" />
-        <option value="$PROJECT_DIR$/projetDjango/templates/professeur/ajouter.html" />
-        <option value="$PROJECT_DIR$/Admin/gestionProfesseur/views.py" />
-        <option value="$PROJECT_DIR$/projetDjango/templates/index/create.html" />
+        <option value="$PROJECT_DIR$/projetDjango/templates/cours/modifier.html" />
+        <option value="$PROJECT_DIR$/Admin/database/dbProfesseur.py" />
+        <option value="$PROJECT_DIR$/Admin/database/dbCours.py" />
+        <option value="$PROJECT_DIR$/projetDjango/templates/cours/savemodification.html" />
+        <option value="$PROJECT_DIR$/Admin/gestionCours/urls.py" />
+        <option value="$PROJECT_DIR$/projetDjango/templates/cours/savesuppression.html" />
+        <option value="$PROJECT_DIR$/Admin/gestionCours/views.py" />
+        <option value="$PROJECT_DIR$/projetDjango/templates/cours/supprimer.html" />
+        <option value="$PROJECT_DIR$/projetDjango/templates/cours/lister.html" />
+        <option value="$PROJECT_DIR$/projetDjango/templates/prof/lister.html" />
+        <option value="$PROJECT_DIR$/Admin/gestionIdcours/views.py" />
+        <option value="$PROJECT_DIR$/projetDjango/templates/index/index.html" />
         <option value="$PROJECT_DIR$/Admin/database/models.py" />
         <option value="$PROJECT_DIR$/projetDjango/views.py" />
-        <option value="$PROJECT_DIR$/projetDjango/urls.py" />
-        <option value="$PROJECT_DIR$/projetDjango/templates/prof/cours.html" />
-        <option value="$PROJECT_DIR$/professeur/urls.py" />
-        <option value="$PROJECT_DIR$/projetDjango/templates/profpage.html" />
-        <option value="$PROJECT_DIR$/projetDjango/templates/prof/listerCours.html" />
-        <option value="$PROJECT_DIR$/professeur/views.py" />
-        <option value="$PROJECT_DIR$/projetDjango/settings.py" />
         <option value="$PROJECT_DIR$/projetDjango/wsgi.py" />
+        <option value="$PROJECT_DIR$/projetDjango/settings.py" />
       </list>
     </option>
   </component>
@@ -269,50 +295,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="professeur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prof" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -327,42 +309,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cours" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="professeur" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="projetDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -381,7 +327,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gestionProfesseur" />
+              <option name="myItemId" value="gestionProgramme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projetDjango" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projetDjango" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gestionIdcours" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,11 +400,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\owner\projetDjango\projetDjango\templates\cours" />
       <recent name="C:\Users\owner\projetDjango\projetDjango\templates\prof" />
       <recent name="C:\Users\owner\projetDjango\professeur" />
       <recent name="C:\Users\owner\projetDjango\projetDjango\templates" />
       <recent name="C:\Users\owner\projetDjango\Admin\database" />
-      <recent name="C:\Users\owner\projetDjango\projetDjango\templates\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\owner\projetDjango\Admin" />
@@ -637,109 +601,115 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projetDjango/templates/basepage.html">
+    <entry file="file://$PROJECT_DIR$/Admin/gestionCours/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="58.423077" vertical-offset="1519" max-vertical-offset="5457">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/gestionProfesseur/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="17" selection-end="69" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="2686">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/templates/index/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1143" selection-end="1143" vertical-scroll-proportion="-0.8076923" vertical-offset="591" max-vertical-offset="1887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="25" selection-start="1915" selection-end="1915" vertical-scroll-proportion="-6.12" vertical-offset="833" max-vertical-offset="1394">
-          <folding>
-            <element signature="e#28#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="1071" selection-end="1071" vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="493">
+        <state line="18" column="40" selection-start="642" selection-end="642" vertical-scroll-proportion="0.54545456" vertical-offset="0" max-vertical-offset="561">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/gestionProfesseur/urls.py">
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/cours/savemodification.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="565">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/professeur/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="404" selection-end="404" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/templates/prof/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/templates/prof/cours.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="78" selection-start="630" selection-end="630" vertical-scroll-proportion="-12.692307" vertical-offset="61" max-vertical-offset="4012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/templates/profpage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="41" selection-start="4549" selection-end="4549" vertical-scroll-proportion="-46.0" vertical-offset="1643" max-vertical-offset="3587">
+        <state line="12" column="47" selection-start="0" selection-end="902" vertical-scroll-proportion="0.325" vertical-offset="22" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Admin/gestionCours/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="656" selection-end="656" vertical-scroll-proportion="-6.88" vertical-offset="202" max-vertical-offset="2652">
+        <state line="136" column="20" selection-start="5154" selection-end="5154" vertical-scroll-proportion="-3.24" vertical-offset="2231" max-vertical-offset="3196">
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/templates/prof/listerCours.html">
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/cours/savesuppression.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="52" selection-start="1044" selection-end="1044" vertical-scroll-proportion="-11.538462" vertical-offset="227" max-vertical-offset="4012">
+        <state line="12" column="48" selection-start="232" selection-end="232" vertical-scroll-proportion="0.3642857" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/professeur/views.py">
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/cours/supprimer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="4" selection-start="1551" selection-end="1551" vertical-scroll-proportion="-0.88" vertical-offset="743" max-vertical-offset="2533">
+        <state line="48" column="104" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.6589286" vertical-offset="447" max-vertical-offset="2278">
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#7;n#table#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/cours/lister.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="154" selection-start="1812" selection-end="1926" vertical-scroll-proportion="-5.8461537" vertical-offset="902" max-vertical-offset="1428">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projetDjango/settings.py">
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/prof/lister.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="0" selection-start="2331" selection-end="2331" vertical-scroll-proportion="-8.8" vertical-offset="1395" max-vertical-offset="2057">
+        <state line="57" column="148" selection-start="1483" selection-end="1483" vertical-scroll-proportion="0.4489796" vertical-offset="727" max-vertical-offset="1343">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/basepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="57.0" vertical-offset="1482" max-vertical-offset="5355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/database/dbCours.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="72" selection-start="205" selection-end="205" vertical-scroll-proportion="0.22080292" vertical-offset="32" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/gestionIdcours/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="81" selection-start="2256" selection-end="2256" vertical-scroll-proportion="0.79679143" vertical-offset="624" max-vertical-offset="2210">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/gestionProgramme/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.61497325" vertical-offset="345" max-vertical-offset="1921">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/database/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="48" selection-start="2239" selection-end="2239" vertical-scroll-proportion="-10.32" vertical-offset="779" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetDjango/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="24" selection-start="553" selection-end="553" vertical-scroll-proportion="-12.576923" vertical-offset="64" max-vertical-offset="1139">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projetDjango/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="39" selection-start="1548" selection-end="1548" vertical-scroll-proportion="-12.0" vertical-offset="482" max-vertical-offset="1581">
+          <folding>
+            <element signature="e#28#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -750,9 +720,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/database/models.py">
+    <entry file="file://$PROJECT_DIR$/projetDjango/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="46" selection-start="2444" selection-end="2444" vertical-scroll-proportion="0.63703704" vertical-offset="795" max-vertical-offset="1360">
+        <state line="107" column="27" selection-start="2698" selection-end="2698" vertical-scroll-proportion="0.7361854" vertical-offset="1406" max-vertical-offset="2057">
           <folding />
         </state>
       </provider>

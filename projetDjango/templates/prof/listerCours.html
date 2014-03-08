@@ -1,231 +1,340 @@
 {% extends "profpage.html" %}
 
 
+{%block log%}{{username}}{%endblock%}
+
 
 {% block listing %}
 
-        <div class="side-content fr">
-				<div id="codecours" class="content-module">
+<div class="side-content fr">
+<div id="codecours" class="content-module">
 
-					<div class="module-heading cf">
+<div class="module-heading cf">
 
-						<h3 class="fl">Liste des code cours</h3>
+    <h3 class="fl">FICHE DES COURS</h3>
 
-					</div> <!-- end content-module-heading -->
+</div>
+<!-- end content-module-heading -->
 
 
-					<div class="content-module-main">
+<div class="content-module-main">
 
-                        <table>
-                                <tr>
+<table>
+<!--<tr>
 
-                                    <td colspan="2" class="table-footer">
-                                    <form name="form" action="" method="post">
-										<label for="table-select-actions">Cours :</label>
+    <td colspan="2" class="table-footer">
+        <form name="form" action="" method="post">
+            <label for="table-select-actions">Cours :</label>
 
-										<select name="cours" id="table-select-actions" onchange="document.getElementsByName('form')[0].submit();">
-                                            <option></option>
-                                            {% for ecole in school %}
-											<option value="{{ ecole.id }}">{{ecole.titre}}</option>
-                                            {%endfor%}
-										</select>
-                                        {{username}}
+            <select name="cours" id="table-select-actions" onchange="document.getElementsByName('form')[0].submit();">
+                <option></option>
+                {% for ecole in school %}
+                <option value="{{ ecole.id }}">{{ecole.titre}}</option>
+                {%endfor%}
+            </select>
+            {{username}}
 
-                                       </form>
-                                      </td>
-                                   </tr>
-                            <tr>
-                                <td>
+        </form>
+    </td>
+</tr>-->
 
-                                </td>
-                            </tr>
-                            <tr>
-                                    <td>
-                           <label>Code cours :</label>
-                                    </td>
-                                    <td>
-                           <select name="idcours" required="">
-                               <option> </option>
-                               {% for ecole in idcours %}
-                            <option value="{{ecole.id}}">{{ecole.codecours}}</option>
-                               {%endfor%}
-                            </select>
-                                        </td>
-                                    <td>
+<form method="post" action="/professeur/cours/remplirFiche/">
+    <tr>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                           <label>Etablissement :</label>
-                                    </td>
-                                    <td>
-                           <select name="etablissement" required="">
-                               <option> </option>
-                               {% for ecole in etab %}
-                            <option value="{{ecole.id}}">{{ecole.nom}}</option>
-                               {%endfor%}
-                            </select>
-                                        </td>
-                                    <td>
+    <td colspan="2" class="table-footer">
+            <label for="table-select-actions">Cours :</label>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                           <label>Professeur :</label>
-                                    </td>
-                                    <td>
-                           <select name="professeur" required="">
-                               <option> </option>
-                               {% for ecole in prof %}
-                            <option value="{{ecole.id}}">{{ecole.prenom}} {{ecole.nom}}</option>
-                               {%endfor%}
-                            </select>
-                                        </td>
-                                    <td>
+            <select name="cours" id="table-select-actions" onchange="document.getElementsByName('form')[0].submit();">
+                <option></option>
+                {% for ecoles in school %}
+                <option value="{{ ecoles.id }}">{{ecoles.titre}}</option>
+                {%endfor%}
+            </select>
+    </td>
+</tr>
 
-                                    </td>
-                                </tr>
-
-                                 <tr>
-                                     <td>
-                           <label>Titre :</label>
-                                        </td>
-                                     <td>
-                                        <input type="text" name="titre" required="">
-                                         </td>
-                                <td>
-
-                                </tr>
-                                <tr>
-                                     <td>
-                           <label>Credit ECTS :</label>
-                                        </td>
-                                     <td>
-                                        <input type="text" name="creditECTS" required="">
-                                         </td>
-                                <td>
-
-                                </tr>
-                                <tr>
-                                     <td>
-                           <label>Public cible :</label>
-                                        </td>
-                                     <td>
-                                        <input type="text" name="public" required="">
-                                         </td>
-                                <td>
-
-                                </tr>
-
-                                <tr>
-                                     <td>
-                           <label>Pre-requis :</label>
-                                        </td>
-                                     <td>
-                                        <input type="text" name="prerequis" required="">
-                                         </td>
-                                <td>
-
-                                </tr>
-                                <tr>
+                                     <tr>
                                      <td>
                            <label>Objectif :</label>
                                         </td>
-                                     <td>
-                                        <textarea type="text" name="objectif" required=""></textarea>
-                                         </td>
-                                <td>
+                                     <td >
+                                         <div >
 
-                                </tr>
+				                         <div class="module">
 
-                                <tr>
-                                     <tr>
-                                     <td>
-                           <label>Description :</label>
-                                        </td>
-                                     <td>
-                                        <textarea type="text" name="description" required=""></textarea>
-                                         </td>
-                                <td>
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
 
-                                </tr>
-
-                                <tr>
-                                     <td>
-                           <label>Plan du Cours :</label>
-                                        </td>
-                                     <td>
-                                        <textarea type="text" name="plan" required=""></textarea>
-                                         </td>
-                                <td>
-
-                                </tr>
-
-                                <tr>
-                                     <td>
-                           <label>Format du cours :</label>
-                                        </td>
-                                     <td>
-                                        <input type="text" name="formatcours" required="">
-                                         </td>
-                                <td>
-
-                                </tr>
-                                 <tr>
-                                     <td>
-                           <label>Ressources :</label>
-                                        </td>
-                                     <td>
-                                        <textarea type="text" name="ressources" required=""></textarea>
-                                         </td>
-                                <td>
-
-                                </tr>
-                                 <tr>
-                                     <td>
-                           <label>Evaluation:</label>
-                                        </td>
-                                     <td>
-                                        <textarea type="text" name="evaluation" required=""></textarea>
-                                         </td>
-                                <td>
-
-                                </tr>
+					                    </div> <!-- end content-module-heading -->
 
 
-                                     <tr>
+					<div class="module-main cf">
 
-                                <td>
-
-                                    </td>
-                                <td style="padding-left:145px">
-                                    <input type="submit" value="Ajouter">
-                                    <a class="submit" href="{% url 'Admin.gestionIdcours.views.index' %}" >Annuler</a>
-                                </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-
-                                    </td>
-                                    <td>
-                                        {{message}}
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                </tr>
-                     </table>
+						<textarea type="text" name="objectif" ></textarea>
 
 					</div> <!-- end content-module-main -->
 
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'objectif', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+                                     <tr>
+                                     <td>
+                           <label>Description du cours :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="description" ></textarea>
+
+					</div> <!-- end content-module-main -->
 
 				</div> <!-- end content-module -->
-            </div>
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'description', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+                                     <tr>
+                                     <td>
+                           <label>Plan du cours :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
 
 
+					<div class="module-main cf">
+
+						<textarea type="text" name="plan" ></textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'plan', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
 
 
-    {% endblock %}
+                                     <tr>
+                                     <td>
+                           <label>Format du cours :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="formatcours" ></textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'formatcours', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+
+                                     <tr>
+                                     <td>
+                           <label>Ressources :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="ressources" ></textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'ressources', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+                                     <tr>
+                                     <td>
+                           <label>Evaluation du cours :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="evaluation" ></textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'evaluation', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+
+    <tr>
+
+        <td>
+
+        </td>
+        <td style="padding-left:145px">
+            <input type="submit" class="submit" value="Ajouter">
+            <a class="submit" href="{% url 'professeur.views.index' %}">Annuler</a>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+
+        </td>
+        <td>
+            {{message}}
+        </td>
+        <td>
+
+        </td>
+    </tr>
+</form>
+
+</table>
+
+</div>
+<!-- end content-module-main -->
+
+
+</div>
+<!-- end content-module -->
+</div>
+
+
+{% endblock %}

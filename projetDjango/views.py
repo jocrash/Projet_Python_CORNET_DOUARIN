@@ -9,6 +9,7 @@ from django.template import Context
 from Admin.database.models import Users
 from Admin.database.dbUsers import dbUsers
 from Admin.database.dbProfesseur import dbProfesseur
+from Admin.database.dbCours import dbCours
 
 
 def login(request):
@@ -37,20 +38,30 @@ def index(request):
     username = request.session
     if 'idsession' not in request.session:
             return redirect("/")
-    return render(request, 'index/index.html',{'username':username})
+
+    gest = dbCours()
+    cours = gest.returnAll()
+    info =  []
+    for inf in cours:
+        if inf.programme.mention == 'SI':
+            info.append(inf.creditECTS)
+
+    return render(request, 'index/index.html',{'info':info,'username':username['idsession']})
 
 def logout(request):
     del request.session['idsession']
     return redirect("/")
 
 def create(request):
+    username = request.session
     if 'idsession' not in request.session:
             return redirect("/")
     gest = dbProfesseur()
     schools = gest.returnAll()
-    return render(request, 'index/create.html',{'prof':schools})
+    return render(request, 'index/create.html',{'prof':schools,'username':username['idsession']})
 
 def sauvegarder(request):
+    user = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     now = datetime.datetime.now()
@@ -71,6 +82,6 @@ def sauvegarder(request):
     else:
         message = "le compte {} existe deja.".format(username)
 
-    return render(request, 'index/create.html',{'message':message})
+    return render(request, 'index/create.html',{'message':message,'username':user['idsession']})
 
 

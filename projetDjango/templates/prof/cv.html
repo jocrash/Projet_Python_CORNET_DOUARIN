@@ -1,5 +1,6 @@
 {% extends "profpage.html" %}
 
+        {%block log%}{{username}}{%endblock%}
 
 {% block listing %}
 
@@ -40,13 +41,13 @@
                            <label>Nom :</label>
                                     </td>
                                     <td>
-                           <input name="nom" type="text" value="{{cv.nom}}" readonly>
+                           <label name="nom" type="text" value="{{cv.nom}}">{{cv.nom}}</label>
                                         </td>
                                      <td>
                            <label>CIN :</label>
                                         </td>
                                      <td>
-                           <input name="cin" type="text" value="{{cv.cin}}" readonly>
+                           <label name="cin" type="text" value="{{cv.cin}}" >{{cv.cin}}</label>
                                          </td>
                                     <td>
 
@@ -57,13 +58,13 @@
                            <label>Prenom :</label>
                                         </td>
                                      <td>
-                           <input name="prenom" type="text" value="{{cv.prenom}}" readonly>
+                           <label name="prenom" type="text" value="{{cv.prenom}}">{{cv.prenom}}</label>
                                          </td>
                                      <td>
                            <label>Telephone :</label>
                                         </td>
                                      <td>
-                           <input name="telephone" type="text" value="{{cv.telephone}}" readonly>
+                           <label name="telephone" type="text" value="{{cv.telephone}}">{{cv.telephone}}</label>
                                          </td>
                                 <td>
 
@@ -76,13 +77,13 @@
                            <label>Sexe :</label>
                                         </td>
                                      <td>
-                           <input name="sexe" type="text" value="{{cv.sexe}}" readonly>
+                           <label name="sexe" type="text" value="{{cv.sexe}}">{{cv.sexe}}</label>
                                          </td>
                                     <td>
                            <label>E-mail :</label>
                                         </td>
                                      <td>
-                           <input name="email" type="text" value="{{cv.email}}" readonly>
+                           <label name="email" type="text" value="{{cv.email}}">{{cv.email}}</label>
                                          </td>
                                 <td>
 

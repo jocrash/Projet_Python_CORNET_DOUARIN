@@ -13,31 +13,35 @@ from Admin.database.models import Programme
 
 
 def index(request):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProgramme()
     programme = gest.returnAll()
-    return render(request, 'programme/lister.html', {'school': programme})
+    return render(request, 'programme/lister.html', {'school': programme,'username':username['idsession']})
 
 def ajouter(request):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     now = datetime.datetime.now()
     t = get_template('programme/ajouter.html')
-    html = t.render(Context({'current_date': now}))
+    html = t.render(Context({'current_date': now,'username':username['idsession']}))
     return HttpResponse(html)
 
 def sauvegarder(request):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
-    now = datetime.datetime.now()
+    date = datetime.datetime.now()
     domaine = request.GET['domaine']
     mention = request.GET['mention']
     specialite = request.GET['specialite']
     typecours = request.GET['typecours']
     langue = request.GET['langue']
+    codeprogramme = "{}-{}-{}-{}-{}".format(domaine,mention,specialite,typecours,langue)
     etab = dbProgramme()
-    ecole = Programme(domaine=domaine,mention=mention,specialite=specialite,typecours=typecours,langue=langue,date=now)
+    ecole = Programme(domaine=domaine,mention=mention,specialite=specialite,typecours=typecours,langue=langue,codeprogramme=codeprogramme,date=date)
 
     if(not etab.isExist(domaine=domaine,mention=mention,specialite=specialite,typecours=typecours,langue=langue)):
         if(not etab.save(ecole)):
@@ -46,17 +50,19 @@ def sauvegarder(request):
             message = "Programme non ajouter."
     else:
         message = "le programme {}-{}-{}-{}-{} existe deja.".format(domaine,mention,specialite,typecours,langue)
-    return render(request, 'programme/ajouter.html',{'message': message})
+    return render(request, 'programme/ajouter.html',{'message': message,'username':username['idsession']})
 
 
 def modifier(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProgramme()
     etab = gest.returnOne(id)
-    return render(request, 'programme/modifier.html',{'etab':etab})
+    return render(request, 'programme/modifier.html',{'etab':etab,'username':username['idsession']})
 
 def savemodification(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     now = datetime.datetime.now()
@@ -71,16 +77,18 @@ def savemodification(request,id):
         message = "programme non modifier !"
     else:
         message = "programme modifier."
-    return render(request, 'programme/savemodification.html',{'message':message,'etab':etab})
+    return render(request, 'programme/savemodification.html',{'message':message,'etab':etab,'username':username['idsession']})
 
 def supprimer(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProgramme()
     etab = gest.returnOne(id)
-    return render(request, 'programme/supprimer.html',{'etab':etab})
+    return render(request, 'programme/supprimer.html',{'etab':etab,'username':username['idsession']})
 
 def savesuppression(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProgramme()
@@ -92,7 +100,7 @@ def savesuppression(request,id):
             message = "programme non effacee."
     else:
         message = "Le programme n'existe pas !"
-    return render(request, 'programme/savesuppression.html',{'message':message,'etab':etab})
+    return render(request, 'programme/savesuppression.html',{'message':message,'etab':etab,'username':username['idsession']})
 
 
 

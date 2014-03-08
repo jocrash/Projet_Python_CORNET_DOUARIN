@@ -1,7 +1,8 @@
 {% extends "basepage.html" %}
 
+{%block log%}{{username}}{%endblock%}
 
-       {% block listing %}
+{% block listing %}
 
         <div class="side-content fr">
 
@@ -9,93 +10,357 @@
 
 					<div class="module-heading cf">
 
-						<h3 class="fl">Modifier un code cours</h3>
+						<h3 class="fl">Ajouter un cours</h3>
 
 					</div> <!-- end content-module-heading -->
 
 
 					<div class="content-module-main">
 
-                        <form method="GET" action="../sauvegarder/{{etab.id}}/" id="bind">
+						<form method="GET" action="../sauvegarder/{{etab.id}}/" id="bind">
                             <table>
+                                <tr>
+                                    <td>
+                           <label>Code cours :</label>
+                                    </td>
+                                    <td>
+                           <input name="idcours" type = "text" value="{{etab.idcours.codecours}}" readonly/>
+                                        </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>
                            <label>Etablissement :</label>
                                     </td>
                                     <td>
-                                     <select name="etablissement">
-                                     <option value="{{etab.etablissement.nom}}">{{etab.etablissement.nom}}</option>
-                                     {% for ecole in school %}
-                                     <option value="{{ecole.nom}}">{{ecole.nom}}</option>
-                                     {%endfor%}
-                                     </select>
-                                     </td>
-                                    </tr>
-                                <tr>
+                           <select name="etablissement" required="">
+                               <option value="{{etab.etablissement.id}}">{{etab.etablissement.nom}}</option>
+                               {% for ecole in school %}
+                            <option value="{{ecole.id}}">{{ecole.nom}}</option>
+                               {%endfor%}
+                            </select>
+                                        </td>
                                     <td>
-                                <label>Annee :</label>
-                                    </td>
-                                    <td>
-                                        <select name="annee">
-                                        {% if etab.annee == "PROP"%}
-                                            <option value="PROP">PROP - Propeudeutique</option>
-                                            {%elif etab.annee = "L1"%}
-                                            <option value="L1">L1 - Licence 1</option>
-                                             {%elif etab.annee = "L2"%}
-                                            <option value="L2">L2 - Licence 2</option>
-                                             {%elif etab.annee = "L3"%}
-                                            <option value="L3">L3 - Licence 3
-                                                 {%elif etab.annee = "M1"%}
-                                            <option value="M1">M1 - Master 1</option>
-                                             {%elif etab.annee = "M2"%}
-                                            <option value="M2">M2 - Master 2</option>
-                                            {%endif%}
-                                    <option value="PROP">PROP - Propeudeutique</option>
-                                        <option value="L1">L1 - Licence 1</option>
-                                        <option value="L2">L2 - Licence 2</option>
-                                        <option value="L3">L3 - Licence 3</option>
-                                        <option value="M1">M1 - Master 1</option>
-                                        <option value="M2">M2 - Master 2</option>
-                                    </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <td>
-                                <label>Semestre :</label>
-                                </td>
-                                    <td>
-                                        <select name="semestre">
-                                        {% if etab.semestre == "S1"%}
-                                        <option value="S1">S1 - Semestre 1</option>
-                                        {% elif etab.semestre == "S1"%}
-                                        <option value="S2">S2 - Semestre 2</option>
-                                        {%endif%}
 
-                                        <option value="S1">S1 - Semestre 1</option>
-                                        <option value="S2">S2 - Semestre 2</option>
-                                        </select>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>
+                           <label>Professeur :</label>
+                                    </td>
+                                    <td>
+                           <select name="professeur" required="">
+                               <option value="{{etab.professeur.id}}">{{etab.professeur.prenom}} {{etab.professeur.nom}}</option>
+                               {% for ecole in prof %}
+                            <option value="{{ecole.id}}">{{ecole.prenom}} {{ecole.nom}}</option>
+                               {%endfor%}
+                            </select>
+                                        </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+
+                                 <tr>
+                                     <td>
+                           <label>Titre :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="titre" id="titre" value="{{etab.titre}}" required="">
+                                         </td>
+                                <td>
+
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Credit ECTS :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="creditECTS"  value="{{etab.creditECTS}}" required="">
+                                         </td>
+                                <td>
+
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Public cible :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="public" value="{{etab.public}}" required="">
+                                         </td>
+                                <td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Pre-requis :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="prerequis" value="{{etab.prerequis}}" >
+                                         </td>
+                                <td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Objectif du cours :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="objectif">{{etab.objectif}}</textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'objectif', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Plan du cours :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="description">{{etab.description}}</textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'description', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+
+
+                                <tr>
+                                     <td>
+                           <label>Plan du cours :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="plan">{{etab.plan}}</textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'plan', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Format Cours:</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="formatcours" value="">{{etab.formatcours}}</textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'formatcours', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Ressources :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="ressources" value="">{{etab.ressources}}</textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'ressources', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Evaluation :</label>
+                                        </td>
+                                     <td >
+                                         <div >
+
+				                         <div class="module">
+
+					                     <div class="module-heading cf">
+						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
+						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
+
+					                    </div> <!-- end content-module-heading -->
+
+
+					<div class="module-main cf">
+
+						<textarea type="text" name="evaluation" value="">{{etab.evaluation}}</textarea>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+
+			</div>
+                                         <script type="text/javascript">
+                                         CKEDITOR.replace( 'evaluation', {
+				                                        uiColor: '#A9A9A9',
+				                                        height:360,
+				                                        toolbar: [
+					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
+					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+				                                        ]
+			                                });
+
+			                                </script>
+                                         </td>
+                                    <td>
+
+                                </tr>
+
+
                                      <tr>
 
                                 <td>
-                                    <label>Nom cours :</label>
+
                                     </td>
-                                         <td>
-                                            <input type="text" name="nomcours" value="{{etab.nomcours}}">
-                                            </select>
-                                         </td>
-                                      </tr>
-
-                                <tr>
-
-                                <td >
-
+                                <td style="padding-left:145px">
+                                    <input type="submit" value="Modifier">
+                                    <a class="submit" href="{% url 'Admin.gestionIdcours.views.index' %}" >Annuler</a>
                                 </td>
-                                    <td style="padding-left:125px">
-                                        <input type="submit" value="Modifier">
-                                        <a class="submit" href="{% url 'Admin.gestionIdcours.views.index' %}" >Annuler</a>
-                                    </td>
 
                                 </tr>
                                 <tr>
@@ -118,4 +383,3 @@
 				</div> <!-- end content-module -->
             </div>
 {% endblock %}
-

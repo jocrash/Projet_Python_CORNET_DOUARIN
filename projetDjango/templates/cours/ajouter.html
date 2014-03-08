@@ -1,6 +1,6 @@
 {% extends "basepage.html" %}
 
-
+{%block log%}{{username}}{%endblock%}
 
 {% block listing %}
 
@@ -24,12 +24,20 @@
                            <label>Code cours :</label>
                                     </td>
                                     <td>
-                           <select name="idcours" required="">
+                           <select name="idcours" required="" onchange="setTitre(this.label)">
                                <option> </option>
-                               {% for ecole in idcours %}
-                            <option value="{{ecole.id}}">{{ecole.codecours}}</option>
-                               {%endfor%}
-                            </select>
+                                {% for ecole in idcours %}
+                                 <option value="{{ecole.id}}">{{ecole.codecours}}</option>
+                                {% endfor %}
+                              </select>
+
+                                <script>
+                                    function setTitre(titre) {
+                                        var select=document.getElementById('titre');
+                                        select.value = titre;
+                                    }
+                            </script>
+
                                         </td>
                                     <td>
 
@@ -73,7 +81,7 @@
                            <label>Titre :</label>
                                         </td>
                                      <td>
-                                        <input type="text" name="titre" required="">
+                                        <input type="text" name="titre" id="titre" required="">
                                          </td>
                                 <td>
 
@@ -104,63 +112,13 @@
                            <label>Pre-requis :</label>
                                         </td>
                                      <td>
-                                        <input type="text" name="prerequis" required="">
+                                        <input type="text" name="prerequis" >
                                          </td>
                                 <td>
 
                                 </tr>
 
-                                <tr>
-                                     <td>
-                           <label>Objectif :</label>
-                                        </td>
-                                     <td>
-                                        <input type="text" name="objectif" required="">
-                                         </td>
-                                <td>
 
-                                </tr>
-
-                                     <tr>
-                                     <td>
-                           <label>Description du cours :</label>
-                                        </td>
-                                     <td >
-                                         <div >
-
-				                         <div class="module">
-
-					                     <div class="module-heading cf">
-						                    <span class="fr expand-collapse-text initial-expand">CLICKER POUR CACHER</span>
-						                    <span class="fr expand-collapse-text ">CLICKER POUR AFFICHER</span>
-
-					                    </div> <!-- end content-module-heading -->
-
-
-					<div class="module-main cf">
-
-						<textarea type="text" name="description" required=""></textarea>
-
-					</div> <!-- end content-module-main -->
-
-				</div> <!-- end content-module -->
-
-			</div>
-                                         <script type="text/javascript">
-                                         CKEDITOR.replace( 'description', {
-				                                        uiColor: '#A9A9A9',
-				                                        height:360,
-				                                        toolbar: [
-					                                    [ 'Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-' ],
-					                                    [ 'FontSize','Font','Smiley', 'TextColor', 'BGColor'],['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
-				                                        ]
-			                                });
-
-			                                </script>
-                                         </td>
-                                    <td>
-
-                                </tr>
 
                                 <tr>
                                      <td>
@@ -180,7 +138,7 @@
 
 					<div class="module-main cf">
 
-						<textarea type="text" name="plan" required=""></textarea>
+						<textarea type="text" name="plan" ></textarea>
 
 					</div> <!-- end content-module-main -->
 
@@ -221,7 +179,7 @@
 
 					<div class="module-main cf">
 
-						<textarea type="text" name="formatcours" required=""></textarea>
+						<textarea type="text" name="formatcours" ></textarea>
 
 					</div> <!-- end content-module-main -->
 
@@ -261,7 +219,7 @@
 
 					<div class="module-main cf">
 
-						<textarea type="text" name="ressources" required=""></textarea>
+						<textarea type="text" name="ressources"></textarea>
 
 					</div> <!-- end content-module-main -->
 
@@ -301,7 +259,7 @@
 
 					<div class="module-main cf">
 
-						<textarea type="text" name="evaluation" required="">{{cv.formation}}</textarea>
+						<textarea type="text" name="evaluation" >{{cv.formation}}</textarea>
 
 					</div> <!-- end content-module-main -->
 

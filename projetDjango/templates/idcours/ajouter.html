@@ -1,6 +1,6 @@
 {% extends "basepage.html" %}
 
-
+{%block log%}{{username}}{%endblock%}
 
 {% block listing %}
 
@@ -19,6 +19,64 @@
 
 						<form method="GET" action="../sauvegarder/" id="bind">
                             <table>
+                                <tr>
+                                    <td>
+                           <label>Programme :</label>
+                                    </td>
+                                    <td>
+                           <select name="programme" required="" onchange="setAnnee(this.value)">
+                               <option> </option>
+                               {% for ecole in programme %}
+                            <option value="{{ecole.specialite}}">{{ecole.codeprogramme}}</option>
+                               {%endfor%}
+                               <script>
+                                            function setAnnee(value) {
+                                                var select=document.getElementById('annee');
+                                                if (value == 'BDD' || value == 'TEL'){
+                                                    select.innerHTML = "";
+                                                    select.add(new Option('',''),length);
+                                                    select.add(new Option('M1 - Master 1','M1'),length);
+                                                    select.add(new Option('M2 - Master 2','M2'),length);
+                                                }
+                                                else if(value == 'ONE'){
+                                                    select.innerHTML = "";
+                                                    select.add(new Option('',''),length);
+                                                    select.add(new Option('M2 - Master 2','M2'),length);
+                                                }
+                                                else if(value == 'NOSP'){
+                                                    select.innerHTML = "";
+                                                    select.add(new Option('',''),length);
+                                                    select.add(new Option('PROP - Propeudeutique','PROP'),length);
+                                                    select.add(new Option('L1 - Licence 1','L1'),length);
+                                                    select.add(new Option('L2 - Licence 2','L2'),length);
+                                                    select.add(new Option('L3 - Licence 3','L3'),length);
+                                                }
+                                                else if (value == 'SDE' || value == 'SC'){
+                                                    select.innerHTML = "";
+                                                    select.add(new Option('',''),length);
+                                                    select.add(new Option('L1 - Licence 1','L1'),length);
+                                                    select.add(new Option('L2 - Licence 2','L2'),length);
+                                                    select.add(new Option('L3 - Licence 3','L3'),length);
+                                                    select.add(new Option('M1 - Master 1','M1'),length);
+                                                }
+                                                else{
+                                                    select.innerHTML = "";
+                                                    select.add(new Option('',''),length);
+                                                    select.add(new Option('PROP - Propeudeutique','PROP'),length);
+                                                    select.add(new Option('L1 - Licence 1','L1'),length);
+                                                    select.add(new Option('L2 - Licence 2','L2'),length);
+                                                    select.add(new Option('L3 - Licence 3','L3'),length);
+                                                    select.add(new Option('M1 - Master 1','M1'),length);
+                                                }
+
+                                            }
+                                        </script>
+                            </select>
+                                        </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>
                            <label>Etablissement :</label>
@@ -40,14 +98,8 @@
                            <label>Annee :</label>
                                         </td>
                                      <td>
-                                        <select name="annee" required="">
+                                        <select name="annee" id="annee" required="">
                                             <option> </option>
-                                        <option value="PROP">PROP - Propeudeutique</option>
-                                        <option value="L1">L1 - Licence 1</option>
-                                        <option value="L2">L2 - Licence 2</option>
-                                        <option value="L3">L3 - Licence 3</option>
-                                        <option value="M1">M1 - Master 1</option>
-                                        <option value="M2">M2 - Master 2</option>
                                         </select>
                                          </td>
                                 <td>

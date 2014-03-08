@@ -55,7 +55,7 @@
     function Popup(data)
     {
         var mywindow = window.open('', 'cv');
-        mywindow.document.write('<html><head><title>CURRICULUM VITAE</title>');
+        mywindow.document.write('<html><head><title></title>');
         mywindow.document.write('{% load staticfiles %} <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">');
         mywindow.document.write('</head><body >');
         mywindow.document.write(data);
@@ -94,7 +94,6 @@
 	
 	
 	<!-- HEADER -->
-    {% block menu %}
 
 	<div id="header-with-tabs">
 		<div class="page-full-width cf">
@@ -108,7 +107,6 @@
 		</div>
 	</div>
 
-    {% endblock %}
 	
 	
 	
@@ -117,7 +115,6 @@
 		<!---->
 		<div class="page-full-width cf">
 
-            {% block sidemenu %}
 
 			<div class="side-menu fl">
 
@@ -130,16 +127,16 @@
 						                   <ul>
                                                <span class="fr expand-collapse-text initial-expand"></span>
 						                        <span class="fr expand-collapse-text "></span>
-                                               <li><a href='#'>Etablissement</a></li>
+                                               <li><a href="{% url 'Admin.gestionEtablissement.views.index' %}">Etablissement</a></li>
 						                   </ul>
 
 
 					                    </div> <!-- end content-module-heading -->
 
 
-					<div class="module-main cf">
+					<!--<div class="module-main cf submenu">
 
-						<ul>
+						<ul >
 					     <li>
                         <ul>
                             <li><a href="{% url 'Admin.gestionEtablissement.views.index' %}">Liste des Etablissements</a></li>
@@ -148,9 +145,9 @@
                     </li>
                             </ul>
 
-					</div> <!-- end content-module-main -->
+					</div> &lt;!&ndash; end content-module-main &ndash;&gt; -->
 
-				</div> <!-- end content-module -->
+				</div>
 
 			</div>
 
@@ -163,14 +160,14 @@
                                                <span class="fr expand-collapse-text initial-expand"></span>
 						                        <span class="fr expand-collapse-text "></span>
 
-					                        <li><a href='#'>Programme</a></li>
+					                        <li><a href="{% url 'Admin.gestionProgramme.views.index' %}">Programme</a></li>
 						                   </ul>
 
 
 					                    </div> <!-- end content-module-heading -->
 
 
-					<div class="module-main cf">
+					<!--<div class="module-main cf submenu">
 
 						<ul>
 					     <li>
@@ -181,9 +178,9 @@
                     </li>
                             </ul>
 
-					</div> <!-- end content-module-main -->
+					</div> &lt;!&ndash; end content-module-main &ndash;&gt;-->
 
-				</div> <!-- end content-module -->
+				</div>
 
 			</div>
 
@@ -196,14 +193,14 @@
                                                <span class="fr expand-collapse-text initial-expand"></span>
 						                        <span class="fr expand-collapse-text "></span>
 
-					                        <li><a href='#'>Code cours</a>
+					                        <li><a href="{% url 'Admin.gestionIdcours.views.index' %}">Code cours</a>
 						                   </ul>
 
 
 					                    </div> <!-- end content-module-heading -->
 
 
-					<div class="module-main cf">
+					<!--<div class="module-main cf submenu">
 
 						<ul>
 					     <li>
@@ -214,9 +211,9 @@
                     </li>
                             </ul>
 
-					</div> <!-- end content-module-main -->
+					</div> &lt;!&ndash; end content-module-main &ndash;&gt; -->
 
-				</div> <!-- end content-module -->
+				</div>
 
 			</div>
 
@@ -229,14 +226,14 @@
                                                <span class="fr expand-collapse-text initial-expand"></span>
 						                        <span class="fr expand-collapse-text "></span>
 
-					                        <li><a href='#'>Professeurs</a>
+					                        <li><a href="{% url 'Admin.gestionProfesseur.views.index' %}">Professeurs</a>
 						                   </ul>
 
 
 					                    </div> <!-- end content-module-heading -->
 
 
-					<div class="module-main cf">
+					<!--<div class="module-main cf submenu">
 
 						<ul>
 					     <li>
@@ -247,7 +244,7 @@
                     </li>
                             </ul>
 
-					</div> <!-- end content-module-main -->
+					</div>--> <!-- end content-module-main -->
 
 				</div> <!-- end content-module -->
 
@@ -262,14 +259,14 @@
                                                <span class="fr expand-collapse-text initial-expand"></span>
 						                        <span class="fr expand-collapse-text "></span>
 
-					                        <li><a href='#'>Cours</a></li>
+					                        <li><a href="{% url 'Admin.gestionCours.views.index' %}">Cours</a></li>
 						                   </ul>
 
 
 					                    </div> <!-- end content-module-heading -->
 
 
-					<div class="module-main cf">
+					<!--<div class="module-main cf submenu">
 
 						<ul>
 					     <li>
@@ -280,15 +277,12 @@
                     </li>
                             </ul>
 
-					</div> <!-- end content-module-main -->
+					</div>--> <!-- end content-module-main -->
 
 				</div> <!-- end content-module -->
 
 			</div>
          </div>
-
-            {% endblock %}
-
 
             {% block listing %}
 

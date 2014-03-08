@@ -6,8 +6,8 @@ class dbProgramme:
     def save(self,programme):
         programme.save()
 
-    def modify(self,id,domaine,mention,specialite,typecours,langue,date):
-        Programme.objects.filter(id=id).update(domaine=domaine,mention=mention,specialite=specialite,typecours=typecours,langue=langue,date=date)
+    def modify(self,id,domaine,mention,specialite,typecours,langue,codeprogramme,date):
+        Programme.objects.filter(id=id).update(domaine=domaine,mention=mention,specialite=specialite,typecours=typecours,langue=langue,codeprogramme=codeprogramme,date=date)
 
     def returnOne(self,id):
         try:

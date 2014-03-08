@@ -242,6 +242,7 @@ p a, p a:hover { border-bottom: 1px dotted; }
 
 .ic-table-edit { background-image: url("../images/icons/table/actions-edit.png"); }
 .ic-table-delete { background-image: url("../images/icons/table/actions-delete.png"); }
+.ic-table-details { background-image: url("../images/icons/table/actions-details.png"); }
 
 
 
@@ -638,7 +639,9 @@ div.content-module-main {
 	 margin-left:auto;
 }
 
-
+#submenu{
+	background-color: #5d6677;
+}
 
 
 

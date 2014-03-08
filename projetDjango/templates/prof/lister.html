@@ -1,11 +1,10 @@
-{% extends "basepage.html" %}
+{% extends "profpage.html" %}
 
         {%block log%}{{username}}{%endblock%}
 
         {% block listing %}
 
         <div class="side-content fr">
- <input type="button" class="submit" value="Imprimer" onclick="PrintElem('#prog')"/>
 
 				<div id="prog" class="content-module">
 
@@ -40,8 +39,6 @@
 
 									<td colspan="9" class="table-footer">
 
-										<a type="button" class="submit" style="float:right;" href="{% url 'Admin.gestionCours.views.ajouter' %}" >Ajouter</a>
-
 									</td>
 
 								</tr>
@@ -58,9 +55,7 @@
                                     <td>{{ecole.professeur.prenom}} {{ecole.professeur.nom}}</td>
                                     <td>{{ecole.date}}</td>
 									<td>
-										<a href="../gestion_cours/modifier/{{ecole.id}}" class="table-actions-button ic-table-edit" title="Editer"></a>
-										<a href="../gestion_cours/suppression/{{ecole.id}}" class="table-actions-button ic-table-delete" title="Effacer"></a>
-									    <a href="../gestion_cours/details/{{ecole.id}}" class="table-actions-button ic-table-details" title="Details"></a>
+                                        <a href="/professeur/cours/{{ecole.id}}/" class="table-actions-button ic-table-details" title="Details"></a>
                                     </td>
 								</tr>
                                 {% endfor %}

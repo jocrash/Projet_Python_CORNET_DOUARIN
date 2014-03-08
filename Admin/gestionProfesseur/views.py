@@ -12,21 +12,24 @@ from Admin.database.models import CVprof
 # Create your views here.
 
 def index(request):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProfesseur()
     schools = gest.returnAll()
-    return render(request, 'professeur/lister.html', {'school': schools})
+    return render(request, 'professeur/lister.html', {'school': schools,'username':username['idsession']})
 
 def ajouter(request):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     now = datetime.datetime.now()
     t = get_template('professeur/ajouter.html')
-    html = t.render(Context({'current_date': now}))
+    html = t.render(Context({'current_date': now,'username':username['idsession']}))
     return HttpResponse(html)
 
 def sauvegarder(request):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     now = datetime.datetime.now()
@@ -46,17 +49,19 @@ def sauvegarder(request):
             message = "professeur non ajouter."
     else:
         message = "le professeur {} {} existe deja.".format(prenom,nom)
-    return render(request, 'professeur/ajouter.html',{'etab':ecole,'message': message})
+    return render(request, 'professeur/ajouter.html',{'etab':ecole,'message': message,'username':username['idsession']})
 
 
 def modifier(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProfesseur()
     etab = gest.returnOne(id)
-    return render(request, 'professeur/modifier.html',{'etab':etab})
+    return render(request, 'professeur/modifier.html',{'etab':etab,'username':username['idsession']})
 
 def savemodification(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     now = datetime.datetime.now()
@@ -72,9 +77,10 @@ def savemodification(request,id):
         message = "professeur non modifier !"
     else:
         message = "professeur modifier."
-    return render(request, 'professeur/savemodification.html',{'message':message,'etab':etab})
+    return render(request, 'professeur/savemodification.html',{'message':message,'etab':etab,'username':username['idsession']})
 
 def supprimer(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProfesseur()
@@ -82,6 +88,7 @@ def supprimer(request,id):
     return render(request, 'professeur/supprimer.html',{'etab':etab})
 
 def savesuppression(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProfesseur()
@@ -89,19 +96,21 @@ def savesuppression(request,id):
         message = "professeur effacee."
     else:
         message = "professeur non effacee."
-    return render(request, 'professeur/savesuppression.html',{'message':message})
+    return render(request, 'professeur/savesuppression.html',{'message':message,'username':username['idsession']})
 
 #### GESTION CV DU PROFESSEUR ####
 
 def addcv(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProfesseur()
     prof = gest.returnOne(id)
     cv = gest.returnCV(id)
-    return render(request,'professeur/ajouterCV.html',{'etab':prof,'cv':cv})
+    return render(request,'professeur/ajouterCV.html',{'etab':prof,'cv':cv,'username':username['idsession']})
 
 def saveCV(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     now = datetime.datetime.now()
@@ -128,10 +137,11 @@ def saveCV(request,id):
             message = "CV non ajouter."
     else:
         message = "le CV du professeur {} {} existe deja.".format(prenom,nom)
-    return render(request, 'professeur/saveCV.html',{'etab':ecole,'message': message})
+    return render(request, 'professeur/saveCV.html',{'etab':ecole,'message': message,'username':username['idsession']})
 
 
 def viewCV(request,id):
+    username = request.session
     if 'idsession' not in request.session:
         return redirect("/")
     gest = dbProfesseur()
@@ -143,7 +153,7 @@ def viewCV(request,id):
     else:
         message = "le professeur {} {} n'a pas de CV.".format(prof.prenom,prof.nom)
         find = False
-    return render(request,'professeur/cv.html',{'cv':cv, 'prof':prof,'message':message,'find':find})
+    return render(request,'professeur/cv.html',{'cv':cv, 'prof':prof,'message':message,'find':find,'username':username['idsession']})
 
 
 

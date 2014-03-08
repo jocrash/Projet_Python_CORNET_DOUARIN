@@ -1,7 +1,8 @@
 {% extends "basepage.html" %}
 
+{%block log%}{{username}}{%endblock%}
 
-        {% block listing %}
+{% block listing %}
 
         <div class="side-content fr">
 
@@ -9,62 +10,97 @@
 
 					<div class="module-heading cf">
 
-						<h3 class="fl">Supprimer un code cours</h3>
+						<h3 class="fl">Supprimer un cours</h3>
 
 					</div> <!-- end content-module-heading -->
 
 
 					<div class="content-module-main">
 
-                        <form method="GET" action="../sauvegarder/{{etab.id}}/" id="bind">
+						<form method="GET" action="../sauvegarder/{{etab.id}}/" id="bind">
                             <table>
                                 <tr>
                                     <td>
-                           <label>Etablissemente :</label>
+                           <label>Code cours :</label>
                                     </td>
                                     <td>
-                           <input type="text" value="{{etab.etablissement.nom}}" readonly>
+                           <input name="idcours" type = "text" value="{{etab.idcours.codecours}}" readonly/>
                                         </td>
                                     <td>
 
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>
+                           <label>Etablissement :</label>
+                                    </td>
+                                    <td>
+                               <input name="etablissement" type="text" value="{{etab.etablissement.nom}}" />
+                                        </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                           <label>Professeur :</label>
+                                    </td>
+                                    <td>
+                               <input type="text" value="{{etab.professeur.prenom}} {{etab.professeur.nom}}"/>
+                                        </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+
                                  <tr>
                                      <td>
-                           <label>Annee :</label>
+                           <label>Titre :</label>
                                         </td>
                                      <td>
-                           <input type="text" value="{{etab.annee}}" readonly>
+                                        <input type="text" name="titre" id="titre" value="{{etab.titre}}" required="">
                                          </td>
                                 <td>
 
                                 </tr>
                                 <tr>
                                      <td>
-                           <label>Semestre :</label>
+                           <label>Credit ECTS :</label>
                                         </td>
                                      <td>
-                           <input type="text" value="{{etab.semestre}}" readonly>
+                                        <input type="text" name="creditECTS"  value="{{etab.creditECTS}}" required="">
                                          </td>
                                 <td>
 
                                 </tr>
                                 <tr>
                                      <td>
-                           <label>Nom du cours :</label>
+                           <label>Public cible :</label>
                                         </td>
                                      <td>
-                           <input type="text" value="{{etab.nomcours}}" readonly>
+                                        <input type="text" name="public" value="{{etab.public}}" required="">
                                          </td>
                                 <td>
 
                                 </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Pre-requis :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="prerequis" value="{{etab.prerequis}}" >
+                                         </td>
+                                <td>
+
+                                </tr>
+
                                      <tr>
 
                                 <td>
 
                                     </td>
-                                <td style="padding-left:150px" id="delete">
+                                <td style="padding-left:145px">
                                     <input type="submit" value="Supprimer">
                                     <a class="submit" href="{% url 'Admin.gestionIdcours.views.index' %}" >Annuler</a>
                                 </td>
@@ -90,5 +126,3 @@
 				</div> <!-- end content-module -->
             </div>
 {% endblock %}
-
-
