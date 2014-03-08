@@ -16,11 +16,19 @@
 	
 	<!-- jQuery & JS files -->
 	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
-	    <script src="{% static 'js/script.js' %}"></script>
-		<script src="{% static 'api/js/jquery-1.10.2.min.js' %}"></script>
-		<script src="{% static 'api/js/knockout-3.0.0.js' %}"></script>
+     <script src="{% static 'js/script.js' %}"></script>
+
+    <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js" > </script>
+
+    <script src="{% static 'js/ckeditor/ckeditor.js' %}" rel="javascript" type="text/javascript"></script>
+    <script src="{% static 'api/js/jquery-1.10.2.min.js' %}"></script>
+
+    <script src="{% static 'api/js/knockout-3.0.0.js' %}"></script>
 		<script src="{% static 'api/js/globalize.min.js' %}"></script>
 		<script src="{% static 'api/js/dx.chartjs.js' %}"></script>
+
+
+
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -37,6 +45,30 @@
     });
     </script>
 
+    <script type="text/javascript">
+
+    function PrintElem(elem)
+    {
+        Popup($(elem).html());
+    }
+
+    function Popup(data)
+    {
+        var mywindow = window.open('', 'cv');
+        mywindow.document.write('<html><head><title>CURRICULUM VITAE</title>');
+        mywindow.document.write('{% load staticfiles %} <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">');
+        mywindow.document.write('</head><body >');
+        mywindow.document.write(data);
+        mywindow.document.write('</body></html>');
+
+        mywindow.print();
+        mywindow.close();
+
+        return true;
+    }
+
+</script>
+
 </head>
 <body>
 
@@ -47,7 +79,7 @@
 
 			<ul id="nav" class="fl">
 
-				<li class="v-sep"><a href="#" class="round button dark menu-user image-left">Logged in as <strong>{% block log %}admin{%endblock%}</strong></a>
+				<li class="v-sep"><a href="#" class="round button dark menu-user image-left">Logged in as <strong>{% block log %}{%endblock%}</strong></a>
 				</li>
 
 				<li><a href="/logout/" class="round button dark menu-logoff image-left">Log out</a></li>
@@ -67,9 +99,9 @@
 	<div id="header-with-tabs">
 		<div class="page-full-width cf">
 			<ul id="tabs" class="fl">
-				<li><a href='{% url "projetDjango.views.index"  %}'>Home</a></li>
-				<li><a href='{% url "Admin.gestionProgramme.views.index"  %}'>Gestion ESIH</a></li>
-                <li><a href='{% url "projetDjango.views.create"  %}'>Create account</a></li>
+				<li><a href='{% url "projetDjango.views.index"  %}'>Acceuil</a></li>
+				<li><a href='{% url "Admin.gestionEtablissement.views.index"  %}'>Gestion ESIH</a></li>
+                <li><a href='{% url "projetDjango.views.create"  %}'>Creation compte</a></li>
 			</ul> <!-- end tabs -->
 
 			<a href="#" id="company-branding-small" class="fr"><img src='{% static "images/ESIH.jpg" %}' alt="ESIH" /></a>

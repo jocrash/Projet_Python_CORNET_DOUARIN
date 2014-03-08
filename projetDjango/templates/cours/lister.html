@@ -17,121 +17,207 @@
 
 					<div class="content-module-main">
 
-						<table>
+                        <table>
+                                <tr>
 
-							<thead>
+                                    <td colspan="2" class="table-footer">
+                                    <form name="form" action="" method="post">
+										<label for="table-select-actions">Cours :</label>
 
-								<tr>
-									<th>Id</th>
-									<th>Code du cours</th>
-									<th>Etablissement</th>
-                                    <th>Professeur</th>
-                                    <th>Titre</th>
-                                    <th>Nombre de credit ECTS</th>
-                                    <th>Public cible</th>
-                                    <th>Prerequis</th>
-								</tr>
-
-							</thead>
-
-							<tfoot>
-
-
-
-							</tfoot>
-
-							<tbody>
-                                {% for ecole in school %}
-								<tr>
-									<td>{{ecole.id}}</td>
-                                    <td>{{ecole.idcours.codecours}}</td>
-                                    <td>{{ecole.etablissement.nom}}</td>
-                                    <td>{{ecole.professeur.prenom}} {{ecole.professeur.nom}}</td>
-                                    <td>{{ecole.titre}}</td>
-                                    <td>{{ecole.creditECTS}}</td>
-                                    <td>{{ecole.public}}</td>
-                                    <td>{{ecole.prerequis}}</td>
-
-                                    <!--<td><a href="../gestion_etablissement/modifier/{{ecole.id}}"> Modifier</a></td>-->
-                                    <!--<td> <a href="../gestion_etablissement/suppression/{{ecole.id}}"> Supprimer </a></td>-->
-								</tr>
-                                {% endfor %}
-
-							</tbody>
-
-						</table>
-
-					</div> <!-- end content-module-main -->
-
-
-
-                    <!-- TABLEAU 2 -->
-
-
-                    <div class="content-module-main">
-
-						<table>
-
-							<thead>
-
-								<tr>
-                                    <th>Objectif</th>
-                                    <th>Description</th>
-                                    <th>Plan du cours</th>
-                                    <th>Format du cours</th>
-                                    <th>Resssources</th>
-                                    <th>Evaluation</th>
-									<th>Date d'ajout</th>
-									<th>Actions</th>
-								</tr>
-
-							</thead>
-
-							<tfoot>
-
-								<tr>
-
-									<td colspan="5" class="table-footer">
-
-										<label for="table-select-actions">With selected:</label>
-
-										<select id="table-select-actions">
-											<option value="option1">Delete</option>
-											<option value="option2">Export</option>
-											<option value="option3">Archive</option>
+										<select name="cours" id="table-select-actions" onchange="document.getElementsByName('form')[0].submit();">
+                                            <option></option>
+                                            {% for ecole in school %}
+											<option value="{{ ecole.id }}">{{ecole.titre}}</option>
+                                            {%endfor%}
 										</select>
 
-										<a href="#" class="round button blue text-upper small-button">Apply to selected</a>
+                                       </form>
+                                      </td>
+                                   </tr>
+                            <tr>
+                                <td>
 
-									</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td>
+                           <label>Code cours :</label>
+                                    </td>
+                                    <td>
+                           <select name="idcours" required="">
+                               <option> </option>
+                               {% for ecole in idcours %}
+                            <option value="{{ecole.id}}">{{ecole.codecours}}</option>
+                               {%endfor%}
+                            </select>
+                                        </td>
+                                    <td>
 
-								</tr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                           <label>Etablissement :</label>
+                                    </td>
+                                    <td>
+                           <select name="etablissement" required="">
+                               <option> </option>
+                               {% for ecole in etab %}
+                            <option value="{{ecole.id}}">{{ecole.nom}}</option>
+                               {%endfor%}
+                            </select>
+                                        </td>
+                                    <td>
 
-							</tfoot>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                           <label>Professeur :</label>
+                                    </td>
+                                    <td>
+                           <select name="professeur" required="">
+                               <option> </option>
+                               {% for ecole in prof %}
+                            <option value="{{ecole.id}}">{{ecole.prenom}} {{ecole.nom}}</option>
+                               {%endfor%}
+                            </select>
+                                        </td>
+                                    <td>
 
-							<tbody>
-                                {% for ecole in school %}
-								<tr>
-                                    <td>{{ecole.objectif}}</td>
-                                    <td>{{ecole.description}}</td>
-                                    <td>{{ecole.plan}}</td>
-                                    <td>{{ecole.formatcours}}</td>
-                                    <td>{{ecole.ressources}}</td>
-                                    <td>{{ecole.evaluation}}</td>
-                                    <td>{{ecole.date}}</td>
+                                    </td>
+                                </tr>
 
-                                    <!--<td><a href="../gestion_etablissement/modifier/{{ecole.id}}"> Modifier</a></td>-->
-                                    <!--<td> <a href="../gestion_etablissement/suppression/{{ecole.id}}"> Supprimer </a></td>-->
-									<td>
-										<a href="../gestion_cours/modifier/{{ecole.id}}" class="table-actions-button ic-table-edit" title="Editer"></a>
-										<a href="../gestion_cours/suppression/{{ecole.id}}" class="table-actions-button ic-table-delete" title="Effacer"></a>
-									</td>
-								</tr>
-                                {% endfor %}
+                                 <tr>
+                                     <td>
+                           <label>Titre :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="titre" required="">
+                                         </td>
+                                <td>
 
-							</tbody>
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Credit ECTS :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="creditECTS" required="">
+                                         </td>
+                                <td>
 
-						</table>
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Public cible :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="public" required="">
+                                         </td>
+                                <td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Pre-requis :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="prerequis" required="">
+                                         </td>
+                                <td>
+
+                                </tr>
+                                <tr>
+                                     <td>
+                           <label>Objectif :</label>
+                                        </td>
+                                     <td>
+                                        <textarea type="text" name="objectif" required=""></textarea>
+                                         </td>
+                                <td>
+
+                                </tr>
+
+                                <tr>
+                                     <tr>
+                                     <td>
+                           <label>Description :</label>
+                                        </td>
+                                     <td>
+                                        <textarea type="text" name="description" required=""></textarea>
+                                         </td>
+                                <td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Plan du Cours :</label>
+                                        </td>
+                                     <td>
+                                        <textarea type="text" name="plan" required=""></textarea>
+                                         </td>
+                                <td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Format du cours :</label>
+                                        </td>
+                                     <td>
+                                        <input type="text" name="formatcours" required="">
+                                         </td>
+                                <td>
+
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Ressources :</label>
+                                        </td>
+                                     <td>
+                                        <textarea type="text" name="ressources" required=""></textarea>
+                                         </td>
+                                <td>
+
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Evaluation:</label>
+                                        </td>
+                                     <td>
+                                        <textarea type="text" name="evaluation" required=""></textarea>
+                                         </td>
+                                <td>
+
+                                </tr>
+
+
+                                     <tr>
+
+                                <td>
+
+                                    </td>
+                                <td style="padding-left:145px">
+                                    <input type="submit" value="Ajouter">
+                                    <a class="submit" href="{% url 'Admin.gestionIdcours.views.index' %}" >Annuler</a>
+                                </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        {{message}}
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                     </table>
 
 					</div> <!-- end content-module-main -->
 

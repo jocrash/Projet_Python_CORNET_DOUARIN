@@ -614,10 +614,28 @@ div.module-heading {
 
 div.content-module-main { 
 		padding: 1em;
+		display:align-block;
 		/* padding-left:auto;
 		padding-right:auto; */
 		/* border:1px solid black; */
 
+}
+
+.info{
+	margin-left:30px;
+	
+}
+
+#selection{
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:30px;
+}
+
+#chartContainer{
+     margin-right:auto;
+	 margin-left:auto;
 }
 
 

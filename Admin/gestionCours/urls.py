@@ -9,6 +9,7 @@ urlpatterns = patterns('Admin.gestionCours.views',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$','index'),
+    url(r'^/(\d+)$','getCours'),
     url(r'^ajouter/','ajouter'),
     url(r'^sauvegarder/','sauvegarder'),
     url(r'^modifier/(\d+)/$', 'modifier'),

@@ -18,7 +18,13 @@ def index(request):
         return redirect("/")
     gest = dbCours()
     schools = gest.returnAll()
-    return render(request, 'cours/lister.html', {'school': schools})
+    cours = []
+    try:
+        id = request.POST['cours']
+        cours = gest.returnOne(id)
+    except:
+        pass
+    return render(request, 'cours/lister.html', {'school': schools,'ecole':cours})
 
 def ajouter(request):
     if 'idsession' not in request.session:
@@ -130,6 +136,14 @@ def savesuppression(request,id):
     else:
         message = "le code cours n'existe plus !"
     return render(request, 'cours/supprimer.html',{'message':message,'etab':etab})
+
+def getCours(request,id):
+    if 'idsession' not in request.session:
+        return redirect("/")
+
+    gest = dbCours()
+    etab = gest.returnOne(id)
+    return render(request, 'cours/lister.html',{'etab':etab})
 
 
 
