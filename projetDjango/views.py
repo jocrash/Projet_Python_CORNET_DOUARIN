@@ -9,6 +9,7 @@ from django.template import Context
 from Admin.database.models import Users
 from Admin.database.dbUsers import dbUsers
 
+
 def login(request):
     users = dbUsers()
     user=users.returnAll()
