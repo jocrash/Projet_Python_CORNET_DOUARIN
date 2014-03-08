@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f98ecd09-46ba-47ed-8c08-878af945d2ed" name="Default" comment="" />
+    <list default="true" id="f98ecd09-46ba-47ed-8c08-878af945d2ed" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/settings.py" afterPath="$PROJECT_DIR$/projetDjango/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetDjango/wsgi.py" afterPath="$PROJECT_DIR$/projetDjango/wsgi.py" />
+    </list>
     <ignored path="projetDjango.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +29,7 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projetDjango/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="0" selection-start="2203" selection-end="2203" vertical-scroll-proportion="-11.88" vertical-offset="1216" max-vertical-offset="2057">
+            <state line="95" column="0" selection-start="2331" selection-end="2331" vertical-scroll-proportion="-9.84" vertical-offset="1369" max-vertical-offset="2057">
               <folding />
             </state>
           </provider>
@@ -91,7 +94,7 @@
       <file leaf-file-name="wsgi.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projetDjango/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="1" selection-start="481" selection-end="481" vertical-scroll-proportion="0.53518516" vertical-offset="0" max-vertical-offset="540">
+            <state line="17" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.53518516" vertical-offset="0" max-vertical-offset="540">
               <folding />
             </state>
           </provider>
@@ -143,14 +146,14 @@
         <option value="$PROJECT_DIR$/projetDjango/templates/index/index.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/login/login.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/cours/ajouter.html" />
-        <option value="$PROJECT_DIR$/projetDjango/settings.py" />
-        <option value="$PROJECT_DIR$/projetDjango/wsgi.py" />
         <option value="$PROJECT_DIR$/projetDjango/views.py" />
         <option value="$PROJECT_DIR$/projetDjango/templates/professeur/lister.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/programme/lister.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/idcours/lister.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/etablissement/lister.html" />
         <option value="$PROJECT_DIR$/projetDjango/templates/cours/lister.html" />
+        <option value="$PROJECT_DIR$/projetDjango/settings.py" />
+        <option value="$PROJECT_DIR$/projetDjango/wsgi.py" />
       </list>
     </option>
   </component>
@@ -607,14 +610,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projetDjango/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="2203" selection-end="2203" vertical-scroll-proportion="-11.88" vertical-offset="1216" max-vertical-offset="2057">
+        <state line="95" column="0" selection-start="2331" selection-end="2331" vertical-scroll-proportion="-9.84" vertical-offset="1369" max-vertical-offset="2057">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projetDjango/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="481" selection-end="481" vertical-scroll-proportion="0.53518516" vertical-offset="0" max-vertical-offset="540">
+        <state line="17" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.53518516" vertical-offset="0" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
