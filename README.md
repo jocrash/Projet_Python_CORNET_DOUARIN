@@ -5,7 +5,7 @@ projet Python Final
 
 Group :
 
-CORNET Joel
+CORNET Joel, 
 DOUARIN Moise
 
 Master I DB et Programmation
