@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     (r'^admin/esih/gestion_Idcours/', include('Admin.gestionIdcours.urls')),
     (r'^admin/esih/gestion_professeur/', include('Admin.gestionProfesseur.urls')),
     (r'^admin/esih/gestion_cours/', include('Admin.gestionCours.urls')),
+    url(r'^professeur/', include('professeur.urls')),
 
     #url(r'^admin/', include(admin.site.urls)),
 )

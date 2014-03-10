@@ -8,6 +8,7 @@ from django.template.loader import get_template
 from django.template import Context
 from Admin.database.models import Users
 from Admin.database.dbUsers import dbUsers
+from Admin.database.dbProfesseur import dbProfesseur
 
 
 def login(request):
@@ -18,6 +19,11 @@ def login(request):
         for t in user :
             if request.POST['username'].__eq__(t.username) and request.POST['password'].__eq__(t.password):
                request.session['idsession'] = request.POST['username']
+               request.session['type'] = t.type
+               if t.type == "Administrateur":
+                   return redirect("/admin/")
+               else:
+                   return redirect("/professeur/")
             else:
                 message = "Access denied"
         if 'idsession' in request.session:
@@ -40,20 +46,22 @@ def logout(request):
 def create(request):
     if 'idsession' not in request.session:
             return redirect("/")
-    return render(request, 'index/create.html')
+    gest = dbProfesseur()
+    schools = gest.returnAll()
+    return render(request, 'index/create.html',{'prof':schools})
 
 def sauvegarder(request):
     if 'idsession' not in request.session:
         return redirect("/")
     now = datetime.datetime.now()
     users = dbUsers()
-    nom = request.POST['nom']
-    prenom = request.POST['prenom']
+    gest = dbProfesseur()
+    idprof = request.POST['idprof']
     username = request.POST['username']
     password = request.POST['password']
     type = request.POST['type']
 
-    utilisateur = Users(nom=nom,prenom=prenom,username=username,password=password,type=type,date=now)
+    utilisateur = Users(professeur=gest.returnOne(idprof),username=username,password=password,type=type,date=now)
 
     if(not users.isExist(username=username)):
         if(not users.save(utilisateur)):

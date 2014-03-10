@@ -65,8 +65,7 @@ class Cours(models.Model):
     date = models.DateTimeField()
 
 class Users(models.Model):
-    nom = models.CharField(max_length=100)
-    prenom = models.CharField(max_length=100)
+    professeur = models.ForeignKey(Professeur)
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     type = models.CharField(max_length=100)

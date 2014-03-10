@@ -1,0 +1,165 @@
+{% extends "profpage.html" %}
+
+
+{% block listing %}
+
+        <div  class="side-content fr">
+
+            <input type="button" class="submit" value="Imprimer" onclick="PrintElem('#cv')" />
+
+				<div id="cv" class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">CV de {{prof.prenom}} {{prof.nom}}</h3>
+
+					</div> <!-- end content-module-heading -->
+
+                    {% if find == False %}
+					<div class="content-module-main">
+
+
+                    <center>Le professeur {{prof.prenom}} {{prof.nom}} n'a pas de CV.</center>
+					</div> <!-- end content-module-main -->
+                    {%else%}
+                    <div class="content-module-main">
+
+
+             <!---- Informations personnelles ------>
+                        <div class="module-heading cf">
+
+						<h3 class="fl">Infomations personnelles</h3>
+
+					    </div>
+                           <hr />
+                        <div class="content-module-main">
+
+                            <table class="bind">
+                                <tr>
+                                    <td>
+                           <label>Nom :</label>
+                                    </td>
+                                    <td>
+                           <input name="nom" type="text" value="{{cv.nom}}" readonly>
+                                        </td>
+                                     <td>
+                           <label>CIN :</label>
+                                        </td>
+                                     <td>
+                           <input name="cin" type="text" value="{{cv.cin}}" readonly>
+                                         </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                 <tr>
+                                     <td>
+                           <label>Prenom :</label>
+                                        </td>
+                                     <td>
+                           <input name="prenom" type="text" value="{{cv.prenom}}" readonly>
+                                         </td>
+                                     <td>
+                           <label>Telephone :</label>
+                                        </td>
+                                     <td>
+                           <input name="telephone" type="text" value="{{cv.telephone}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+
+                                </tr>
+
+                                <tr>
+                                     <td>
+                           <label>Sexe :</label>
+                                        </td>
+                                     <td>
+                           <input name="sexe" type="text" value="{{cv.sexe}}" readonly>
+                                         </td>
+                                    <td>
+                           <label>E-mail :</label>
+                                        </td>
+                                     <td>
+                           <input name="email" type="text" value="{{cv.email}}" readonly>
+                                         </td>
+                                <td>
+
+                                </td>
+                                </tr>
+
+                     </table>
+
+                         </div>
+
+                    <!---- Experience professionnelle ----->
+
+
+                        <div class="module-heading cf">
+
+						<h3 class="fl">Experience professionelle</h3>
+
+					    </div>
+                        <hr />
+
+                        <div class="content-module-main">
+                        <div class="info">
+                        {% autoescape off %}{{cv.experience}}{% endautoescape%}
+                            </div>
+
+                         </div>
+
+                   <!--- Education et formation --->
+
+                        <div class="module-heading cf">
+                            <div class="info">
+						<h3 class="fl">Formation</h3>
+
+                            </div>
+
+					    </div>
+
+                        <hr />
+                        <div class="content-module-main">
+                                <div class="info">
+                            {% autoescape off %}{{cv.formation}}{% endautoescape%}
+                                </div>
+                         </div>
+
+                        <div class="module-heading cf">
+                            <div class="info">
+						<h3 class="fl">Education</h3>
+
+                            </div>
+
+					    </div>
+                            <hr />
+                        <div class="content-module-main">
+                                <div class="info">
+                            {% autoescape off %}{{cv.etude}}{% endautoescape%}
+                                </div>
+                         </div>
+
+                    <!--- Competences personnelles --->
+
+                    <div class="module-heading cf">
+                            <div class="info">
+						<h3 class="fl">Competences personnelles</h3>
+
+                                </div>
+					    </div>
+                        <hr />
+
+                        <div class="content-module-main">
+                            {% autoescape off %}{{cv.competence}}{% endautoescape%}
+
+                         </div>
+
+					</div>
+                    {%endif%}
+
+				</div> <!-- end content-module -->
+            </div>
+
+    {% endblock %}

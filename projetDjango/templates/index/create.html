@@ -17,28 +17,24 @@
 
 						<form method="post" action="../createAccount/sauvegarder/" id="bind">
                             <table>
-                                <tr>
-                                    <td>
-                           <label>Nom :</label>
-                                    </td>
-                                    <td>
-                           <input name="nom" type="text" required="">
-                                        </td>
-                                    <td>
 
-                                    </td>
-                                </tr>
                                  <tr>
-                                     <td>
-                           <label>Prenom :</label>
+                                    <td>
+                           <label>Professeur :</label>
+                                    </td>
+                                    <td>
+                           <select name="idprof" required="">
+                               <option> </option>
+                               {% for school in prof %}
+                            <option value="{{school.id}}">{{school.prenom}} {{school.nom}}</option>
+                               {%endfor%}
+                            </select>
                                         </td>
-                                     <td>
-                           <input name="prenom" type="text" required="">
-                                         </td>
-                                <td>
+                                    <td>
 
-                                </td>
+                                    </td>
                                 </tr>
+
                                  <tr>
                                      <td>
                            <label>Username :</label>

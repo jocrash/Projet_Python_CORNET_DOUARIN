@@ -1,0 +1,82 @@
+{% extends "profpage.html" %}
+
+
+{% block listing %}
+
+        <div class="side-content fr">
+				<div id="prof" class="content-module">
+
+					<div class="module-heading cf">
+
+						<h3 class="fl">Liste des professeurs</h3>
+
+					</div> <!-- end content-module-heading -->
+
+
+					<div class="content-module-main">
+
+						<table>
+
+							<thead>
+
+								<tr>
+									<th>Id</th>
+									<th>Nom</th>
+									<th>Prenom</th>
+									<th>sexe</th>
+                                    <th>CIN</th>
+                                    <th>telephone</th>
+                                    <th>E-mail</th>
+                                    <th>Lien vers CV</th>
+                                    <th>Date d'ajout</th>
+								</tr>
+
+							</thead>
+
+							<tfoot>
+
+								<tr>
+
+									<td colspan="5" class="table-footer">
+
+										<label for="table-select-actions">With selected:</label>
+
+										<select id="table-select-actions">
+											<option value="option1">Delete</option>
+											<option value="option2">Export</option>
+											<option value="option3">Archive</option>
+										</select>
+
+										<a href="#" class="round button blue text-upper small-button">Apply to selected</a>
+
+									</td>
+
+								</tr>
+
+							</tfoot>
+
+							<tbody>
+                                {% for ecole in school %}
+								<tr>
+									<td>{{ecole.id}}</td>
+                                    <td>{{ecole.nom}}</td>
+                                    <td>{{ecole.prenom}}</td>
+                                    <td>{{ecole.sexe}}</td>
+                                    <td>{{ecole.cin}}</td>
+                                    <td>{{ecole.telephone}}</td>
+                                    <td>{{ecole.email}}</td>
+                                    <td><a href="../profile/{{ecole.id}}">CV</a></td>
+                                    <td>{{ecole.date}}</td>
+								</tr>
+                                {% endfor %}
+
+							</tbody>
+
+						</table>
+
+					</div> <!-- end content-module-main -->
+
+				</div> <!-- end content-module -->
+            </div>
+
+    {% endblock %}
