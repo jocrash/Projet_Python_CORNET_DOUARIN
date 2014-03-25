@@ -24,8 +24,8 @@ class dbCours:
         list = Cours.objects.all()
         return list
 
-    def fiche(self,id,objectif,description,plan,formatcours,ressources,evaluation,date):
-        Cours.objects.filter(id=id).update(objectif=objectif,description=description,plan=plan,formatcours=formatcours,ressources=ressources,evaluation=evaluation,date=date)
+    def fiche(self,id,prerequis,objectif,description,plan,formatcours,ressources,evaluation,date):
+        Cours.objects.filter(id=id).update(prerequis=prerequis,objectif=objectif,description=description,plan=plan,formatcours=formatcours,ressources=ressources,evaluation=evaluation,date=date)
 
     def isExist(self,idcours,professeur,etablissement,titre):
         try:

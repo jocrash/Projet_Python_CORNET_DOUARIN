@@ -158,6 +158,7 @@ def ajouter(request):
         return redirect("/")
     try:
         cours = request.POST['cours']
+        prerequis = request['prerequis']
         objectif = request.POST['objectif']
         description = request.POST['description']
         plan = request.POST['plan']
@@ -165,10 +166,10 @@ def ajouter(request):
         ressources = request.POST['ressources']
         evaluation = request.POST['evaluation']
         gest = dbCours()
-        gest.fiche(id=cours,objectif=objectif,description=description,plan=plan,formatcours=formatcours,ressources=ressources,evaluation=evaluation,date=now)
+        gest.fiche(id=cours,prerequis=prerequis,objectif=objectif,description=description,plan=plan,formatcours=formatcours,ressources=ressources,evaluation=evaluation,date=now)
     except:
         message = "Fiche non remplie."
-    message = "Cours enregistrer !"
+    message = "Fiche enregistrer !"
     t = get_template('prof/cours.html')
     html = t.render(Context({'current_date': now,'message':message}))
     return HttpResponse(html)

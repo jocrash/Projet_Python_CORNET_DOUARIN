@@ -42,10 +42,6 @@ def index(request):
     gest = dbCours()
     cours = gest.returnAll()
     info =  []
-    for inf in cours:
-        if inf.programme.mention == 'SI':
-            info.append(inf.creditECTS)
-
     return render(request, 'index/index.html',{'info':info,'username':username['idsession']})
 
 def logout(request):
@@ -76,9 +72,9 @@ def sauvegarder(request):
 
     if(not users.isExist(username=username)):
         if(not users.save(utilisateur)):
-            message = "Account created !"
+            message = "Le compte a ete cree !"
         else:
-            message = "Account not created."
+            message = "Compte non cree."
     else:
         message = "le compte {} existe deja.".format(username)
 
